@@ -11,13 +11,13 @@ export interface Hil{
 
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class HilService {
-  private _url :string = "http://localhost:3000/hils";
-  constructor(private http: HttpClient) { }
+  private _url: string = 'http://localhost:3000/hils';
+  constructor(private http: HttpClient) {}
 
-  getHil() : Observable <Hil []>{
-    return this.http.get<Hil []>(this._url);
+  getHil(): Observable<Hil[]> {
+    return this.http.get<Hil[]>(this._url);
   }
 }
