@@ -18,7 +18,7 @@ export class SettingsPageComponent implements OnInit {
     const dialogRef = this.dialog.open(HilSelectionDialogComponent);
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+      console.log(`Dialog result: ${result}`); // retrived selected hils and print
     });
   }
 
