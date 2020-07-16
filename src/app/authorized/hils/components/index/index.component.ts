@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { HilService } from 'src/app/shared/services/hil.service'
-import { HilsModule } from '../../hils.module';
-import { Hil } from '../Hil';
+import { HilService, Hil } from 'src/app/shared/services/hil.service'
+
+
 @Component({
   selector: 'app-index',
   templateUrl: './index.component.html',
@@ -9,6 +9,7 @@ import { Hil } from '../Hil';
 })
 export class IndexComponent implements OnInit {
   public hils : Hil [] = [];
+  
   constructor(private _hilService : HilService) { }
 
   ngOnInit(): void {

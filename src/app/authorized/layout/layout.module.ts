@@ -5,12 +5,13 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { RouterModule } from '@angular/router';
 
 
-
 @NgModule({
   declarations: [TopBarComponent, LayoutComponent],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+   
+
   ],
   exports: [LayoutComponent]
 })

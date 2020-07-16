@@ -1,7 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
-import { Hil } from 'src/app/authorized/hils/components/Hil';
+
 import { Observable } from 'rxjs';
+
+export interface Hil{
+  machinename : string,
+  labcarname : number,
+  osversion : number
+}
+
+
 @Injectable({
   providedIn: 'root'
 })
