@@ -12,6 +12,10 @@ const routes: Routes = [
         path: '',
         loadChildren: () => import('./hils/hils.module').then(m => m.HilsModule)
       },
+      {
+        path: 'settings',
+        loadChildren: () => import('./settings/settings.module').then(m => m.SettingsModule)
+      },
     ],
   },
 ];
