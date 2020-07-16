@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HilService, Hil } from 'src/app/shared/services/hil.service';
 
 @Component({
   selector: 'app-hil-selection-dialog',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HilSelectionDialogComponent implements OnInit {
 
-  constructor() { }
+  public hils: Hil[] = [];
+
+  constructor(private hilService: HilService) {}
 
   ngOnInit(): void {
+    this.hilService.getHil().subscribe(
+      (data) => {
+        this.hils = data;
+        console.log(data);
+      },
+      (err) => console.log(err)
+    );
   }
+
 
 }
