@@ -4,10 +4,11 @@ import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
 
 export interface Hil{
-  machinename : string,
-  labcarname : number,
-  osversion : number,
-  projectname :string
+  machinename : string;
+  labcarname : number;
+  osversion : number;
+  projectname :string;
+  
 }
 
 
