@@ -16,7 +16,7 @@ export class HilSelectionDialogComponent implements OnInit {
   dataSource = new MatTableDataSource<Hil>();
   selection = new SelectionModel<Hil>(true, []);
 
-
+ 
  
   
   
@@ -26,8 +26,9 @@ export class HilSelectionDialogComponent implements OnInit {
     this.hilService.getHil().subscribe(
       (data) => {
         this.hils = data;
-        console.log(data);
+        
         this.dataSource.data=data;
+        
       },
       (err) => console.log(err)
     );
@@ -38,6 +39,7 @@ export class HilSelectionDialogComponent implements OnInit {
   isAllSelected() {
     const numSelected = this.selection.selected.length;
     const numRows = this.dataSource.data.length;
+    
     return numSelected === numRows;
   }
 
@@ -55,6 +57,8 @@ export class HilSelectionDialogComponent implements OnInit {
     }
     return `${this.selection.isSelected(row) ? 'deselect' : 'select'} `;
   }
+
+  
 }
 
 

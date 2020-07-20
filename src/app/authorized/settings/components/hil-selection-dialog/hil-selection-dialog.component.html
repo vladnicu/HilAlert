@@ -13,7 +13,9 @@
         </mat-checkbox>
       </th>
       <td mat-cell *matCellDef="let row">
-        <mat-checkbox (click)="$event.stopPropagation()"
+
+        <mat-checkbox 
+                      (click)="$event.stopPropagation()"
                       (change)="$event ? selection.toggle(row) : null"
                       [checked]="selection.isSelected(row)"
                       [aria-label]="checkboxLabel(row)">
@@ -51,9 +53,13 @@
         (click)="selection.toggle(row)">
     </tr>
   </table>
+  
+
 </mat-dialog-content>
 
-<mat-dialog-actions align="end">
-  <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button>
-</mat-dialog-actions>
+
+<mat-dialog-actions align="end" >
+  <button mat-button  [mat-dialog-close]="selection.selected">Save and close</button>
+  
+  
+</mat-dialog-actions >
