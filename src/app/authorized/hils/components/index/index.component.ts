@@ -8,7 +8,7 @@ import { HilService, Hil } from 'src/app/shared/services/hil.service'
   styleUrls: ['./index.component.scss'],
 })
 export class IndexComponent implements OnInit {
-  public hils: Hil[] = [];
+ public hils: Hil[] = [];
 
   constructor(private hilService: HilService) {
   }
