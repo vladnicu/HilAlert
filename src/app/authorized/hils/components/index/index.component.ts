@@ -9,23 +9,17 @@ import { HilService, Hil } from 'src/app/shared/services/hil.service'
 })
 export class IndexComponent implements OnInit {
   public hils: Hil[] = [];
-  
-  
 
   constructor(private hilService: HilService) {
-    
   }
 
   ngOnInit(): void {
     this.hilService.getHil().subscribe(
       (data) => {
-        this.hils = data;
-        
-        
-        
+        const savedHils: string[] = JSON.parse(localStorage.getItem('hils'));
+        this.hils = data.filter(x => savedHils.includes(x.labcarname));
       },
       (err) => console.log(err)
     );
-    
 }
 }
