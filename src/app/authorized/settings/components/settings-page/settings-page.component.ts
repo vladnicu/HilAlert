@@ -2,24 +2,23 @@ import { Component, OnInit } from '@angular/core';
 import { HilSelectionDialogComponent } from '../hil-selection-dialog/hil-selection-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
 
+import { Hil } from 'src/app/shared/services/hil.service';
+
 @Component({
   selector: 'app-settings-page',
   templateUrl: './settings-page.component.html',
-  styleUrls: ['./settings-page.component.scss']
+  styleUrls: ['./settings-page.component.scss'],
 })
 export class SettingsPageComponent implements OnInit {
+  constructor(public dialog: MatDialog) {}
 
-  constructor(public dialog: MatDialog) { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-  }
-
-  openDialog() {
+  openDialog(): void {
     const dialogRef = this.dialog.open(HilSelectionDialogComponent);
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`); // retrived selected hils and print
+    dialogRef.afterClosed().subscribe((result: Hil[]) => {
+      localStorage.setItem('hils', JSON.stringify(result.map(x => x.labcarname)));
     });
   }
-
 }
