@@ -13,7 +13,7 @@ import {MatTableDataSource} from '@angular/material/table';
 export class HilSelectionDialogComponent implements OnInit {
   public hils: Hil[] = [];
   public initialSelection: Hil[] = [];
-  displayedColumns: string[] = ['select', 'machinename', 'labcarname', 'osversion', 'projectname'];
+  displayedColumns: string[] = ['select', 'machinename', 'labcarname'];
   dataSource = new MatTableDataSource<Hil>();
   selection =  new SelectionModel<Hil>(true, []);  
 

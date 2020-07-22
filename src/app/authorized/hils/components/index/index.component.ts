@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HilService, Hil } from 'src/app/shared/services/hil.service'
+import { HilService, Hil } from 'src/app/shared/services/hil.service';
+import { DatePipe, formatDate, ɵPLATFORM_WORKER_APP_ID } from '@angular/common';
 
 
 @Component({
@@ -8,9 +9,11 @@ import { HilService, Hil } from 'src/app/shared/services/hil.service'
   styleUrls: ['./index.component.scss'],
 })
 export class IndexComponent implements OnInit {
- public hils: Hil[] = [];
+  public hils: Hil[] = [];
 
-  constructor(private hilService: HilService) {
+  constructor(private hilService: HilService){
+    // this.myDate = this.datePipe.transform(this.myDate, 'yyyy-MM-dd');
+
   }
 
   ngOnInit(): void {
@@ -21,5 +24,17 @@ export class IndexComponent implements OnInit {
       },
       (err) => console.log(err)
     );
-}
+  }
+
+  cardClasses(hil: Hil){
+    var hilDateStr = hil.date;   
+    var hilDate = new Date(hilDateStr);
+    var diff =  Date.now() - hilDate.getTime();
+    var minutes = Math.floor((diff / 1000) / 60);
+
+    
+    return {
+     'date': minutes > 30
+    }
+  }
 }

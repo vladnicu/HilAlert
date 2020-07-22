@@ -8,6 +8,7 @@ export interface Hil{
   labcarname: string;
   osversion: string;
   projectname: string;
+  date: string;
 }
 
 
