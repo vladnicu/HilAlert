@@ -12,21 +12,36 @@ import {MatTableDataSource} from '@angular/material/table';
 })
 export class HilSelectionDialogComponent implements OnInit {
   public hils: Hil[] = [];
+  public initialSelection: Hil[] = [];
   displayedColumns: string[] = ['select', 'machinename', 'labcarname', 'osversion', 'projectname'];
   dataSource = new MatTableDataSource<Hil>();
-  selection = new SelectionModel<Hil>(true, []);
+  selection =  new SelectionModel<Hil>(true, []);  
 
-  constructor(private hilService: HilService) {}
+  constructor(private hilService: HilService) {
+    
+  }
 
-  ngOnInit(): void {
+  ngOnInit(): void 
+  {
+      
     this.hilService.getHil().subscribe(
       (data) => {
         this.hils = data;
         this.dataSource.data=data;
-        
+        const savedHils: string[] = JSON.parse(localStorage.getItem('hils'));
+        this.initialSelection = data.filter(x => savedHils.includes(x.labcarname));
+        for (let entry of this.initialSelection) {
+          this.selection.select(entry);
+      }
       },
       (err) => console.log(err)
     );
+    
+
+
+    
+
+    
   }
 
   /** Whether the number of selected elements matches the total number of rows. */
@@ -50,6 +65,9 @@ export class HilSelectionDialogComponent implements OnInit {
     }
     return `${this.selection.isSelected(row) ? 'deselect' : 'select'} `;
   }
+  
+  
+ 
 
 }
 
