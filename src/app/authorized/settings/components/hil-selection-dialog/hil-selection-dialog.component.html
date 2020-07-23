@@ -1,65 +1,54 @@
-
-
 <mat-dialog-content class="mat-typography">
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-
     <!-- Checkbox Column -->
     <ng-container matColumnDef="select">
       <th mat-header-cell *matHeaderCellDef>
-        <mat-checkbox (change)="$event ? masterToggle() : null"
-                      [checked]="selection.hasValue() && isAllSelected()"
-                      [indeterminate]="selection.hasValue() && !isAllSelected()"
-                      [aria-label]="checkboxLabel()">
+        <mat-checkbox
+          (change)="$event ? masterToggle() : null"
+          [checked]="selection.hasValue() && isAllSelected()"
+          [indeterminate]="selection.hasValue() && !isAllSelected()"
+          [aria-label]="checkboxLabel()"
+        >
         </mat-checkbox>
       </th>
       <td mat-cell *matCellDef="let row">
-
-        <mat-checkbox 
-                      (click)="$event.stopPropagation()"
-                      (change)="$event ? selection.toggle(row) : null"
-                      [checked]="selection.isSelected(row)"
-                      [aria-label]="checkboxLabel(row)">
+        <mat-checkbox
+          (click)="$event.stopPropagation()"
+          (change)="$event ? selection.toggle(row) : null"
+          [checked]="selection.isSelected(row)"
+          [aria-label]="checkboxLabel(row)"
+        >
         </mat-checkbox>
       </td>
     </ng-container>
-  
-   
-    <!-- Name Column -->
-    <ng-container matColumnDef="machinename">
-      <th mat-header-cell *matHeaderCellDef> Machine name </th>
-      <td mat-cell *matCellDef="let element"> {{element.machinename}} </td>
-    </ng-container>
-  
-    <!-- Project name -->
-  <ng-container matColumnDef="projectname">
-    <th mat-header-cell *matHeaderCellDef> Project name </th>
-    <td mat-cell *matCellDef="let element"> {{element.projectname}} </td>
-  </ng-container>
-  
-    <!-- Weight Column -->
-    <ng-container matColumnDef="labcarname">
-      <th mat-header-cell *matHeaderCellDef> Labcar name </th>
-      <td mat-cell *matCellDef="let element"> {{element.labcarname}} </td>
-    </ng-container>
-  
-    <!-- Symbol Column -->
-    <ng-container matColumnDef="osversion">
-      <th mat-header-cell *matHeaderCellDef> Os Version </th>
-      <td mat-cell *matCellDef="let element"> {{element.osversion}} </td>
-    </ng-container>
-  
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"
-        (click)="selection.toggle(row)">
-    </tr>
-  </table>
-  
 
+    <!-- machinename Column -->
+    <ng-container matColumnDef="machinename">
+      <th mat-header-cell *matHeaderCellDef>Machine name</th>
+      <td mat-cell *matCellDef="let element">{{ element.machinename }}</td>
+    </ng-container>
+
+    <!-- labcarname Column -->
+    <ng-container matColumnDef="labcarname">
+      <th mat-header-cell *matHeaderCellDef>Labcar name</th>
+      <td mat-cell *matCellDef="let element">{{ element.labcarname }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr
+      mat-row
+      *matRowDef="let row; columns: displayedColumns"
+      (click)="selection.toggle(row)"
+    ></tr>
+  </table>
 </mat-dialog-content>
 
-
-<mat-dialog-actions align="end" >
-  <button mat-button  [mat-dialog-close]="selection.selected">Save and close</button>
-  
-  
-</mat-dialog-actions >
+<mat-dialog-actions align="end">
+  <button
+    mat-raised-button
+    color="primary"
+    [mat-dialog-close]="selection.selected"
+  >
+    Save and close
+  </button>
+</mat-dialog-actions>

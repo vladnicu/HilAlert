@@ -15,7 +15,9 @@ export class SettingsPageComponent implements OnInit {
   ngOnInit(): void {}
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(HilSelectionDialogComponent);
+    const dialogRef = this.dialog.open(HilSelectionDialogComponent,{
+      width: '500px'
+    });
 
     dialogRef.afterClosed().subscribe((result: Hil[]) => {
       localStorage.setItem('hils', JSON.stringify(result.map(x => x.labcarname)));
