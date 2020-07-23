@@ -1,3 +1,16 @@
-<button type="button" class="btn btn-primary" (click)="openDialog()">
-  Hils Selection
-</button>
+<div class="row mt-4">
+  <div class="col-sm-4" (click)="openDialog()">
+    <div class="settings-wrapper rounded-circle text-center">
+      <i class="fa fa-tasks fa-3x" aria-hidden="true"></i>
+      <h4>HILS</h4>
+    </div>
+  </div>
+  <div class="col-sm-4" (click)="openDialog()">
+    <i class="fa fa-user fa-3x" aria-hidden="true"></i>
+    <h4>ACCOUNT</h4>
+  </div>
+  <div class="col-sm-4" (click)="openDialog()">
+    <i class="fa fa-tasks fa-3x" aria-hidden="true"></i>
+    <h4>TEST</h4>
+  </div>
+</div>

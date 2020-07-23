@@ -16,7 +16,6 @@ export class SettingsPageComponent implements OnInit {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(HilSelectionDialogComponent,{
-      height: '610px',
       width: '500px'
     });
 

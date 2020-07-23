@@ -26,15 +26,12 @@ export class IndexComponent implements OnInit {
     );
   }
 
-  cardClasses(hil: Hil){
-    var hilDateStr = hil.date;   
-    var hilDate = new Date(hilDateStr);
-    var diff =  Date.now() - hilDate.getTime();
-    var minutes = Math.floor((diff / 1000) / 60);
+  cardClasses(hil: Hil): boolean{
+    const hilDateStr = hil.date;
+    const hilDate = new Date(hilDateStr);
+    const diff =  Date.now() - hilDate.getTime();
+    const minutes = Math.floor((diff / 1000) / 60);
 
-    
-    return {
-     'date': minutes > 30
-    }
+    return minutes > 30;
   }
 }

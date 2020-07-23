@@ -3,13 +3,13 @@
     class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-6"
     *ngFor="let hil of hils"
   >
-    <mat-card class ="example-card" [ngClass]="cardClasses(hil)">
+    <mat-card class="example-card" [ngClass]="{ 'no-data': cardClasses(hil) }">
       <mat-card-content>
         {{ hil.labcarname }} <br />
         {{ hil.machinename }} <br />
         {{ hil.osversion }} <br />
         {{ hil.projectname }} <br />
-        {{ hil.date }} <br />
+        {{ hil.date | date }} <br />
       </mat-card-content>
     </mat-card>
   </div>
