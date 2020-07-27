@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SwUpdate } from '@angular/service-worker';
 
 
 @Component({
@@ -7,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'hil-alert';
+
+  update = false;
+
+  constructor(updates: SwUpdate) {
+    updates.available.subscribe(event => {
+      // this.update = true;
+
+      updates.activateUpdate().then(() => document.location.reload()); // reloads the page is there is an update
+    });
+  }
 }

@@ -20,7 +20,11 @@ export class IndexComponent implements OnInit {
     this.hilService.getHil().subscribe(
       (data) => {
         const savedHils: string[] = JSON.parse(localStorage.getItem('hils'));
-        this.hils = data.filter(x => savedHils.includes(x.labcarname));
+        if(savedHils) {
+          this.hils = data.filter(x => savedHils.includes(x.labcarname));
+        } else {
+          this.hils = data;
+        }
       },
       (err) => console.log(err)
     );
