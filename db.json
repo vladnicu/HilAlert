@@ -19,35 +19,6 @@
       "localRunningTests": null,
       "localDoneTests": null,
       "serverWaitingTests": "5",
-      "processes": [
-        {
-          "DisplayName": "Canape",
-          "Running": true,
-          "FileVersion": "14.0.40.22673"
-        },
-        {
-          "DisplayName": "DVProject",
-          "Running": true,
-          "FileVersion": "1.13.6.3"
-        },
-        {
-          "DisplayName": "ControlDesk",
-          "Running": true,
-          "FileVersion": "8.2.0.442"
-        },
-        {
-          "DisplayName": "TECAgent",
-          "Running": true,
-          "FileVersion": "2.3.4.2"
-        },
-        {
-          "DisplayName": "TestAutomation",
-          "Running": true,
-          "Path": "D:\\TestAutomation_08\\TestAutomation",
-          "FileVersion": "[3.1.2.0]",
-          "MatlabVersion": "MATLAB R2019b"
-        }
-      ],
       "folders": null,
       "selectedServers": "KO_CIAT_HIL_1",
       "simulationModel": "BMW_35UP_SP2018_19KW20__[V07.001.032]",
@@ -57,51 +28,7 @@
       "testMode": null,
       "projectBookingMissmatch": false,
       "labcarType": "HIL",
-      "updated_at": "2019-08-30T11:44:35.023000Z",
-      "labcar": {
-        "id": 1,
-        "labcarname": "7",
-        "visibility": "visible",
-        "hil": {
-          "_id": "5f0c503187bb9c12d800638c",
-          "Date": "2020-07-13 12:14:40",
-          "MachineName": "KOBDE-LABCAR07",
-          "OSVersion": "Microsoft Windows NT 6.2.9200.0",
-          "PcUptime": "2 days 2 hours",
-          "Ipv4": "149.223.188.242",
-          "Remote": null,
-          "OfficialTestMode": "False",
-          "ProjectName": "BMW SP2018",
-          "SelectedServers": "KO_CIAT_HIL_1",
-          "LabcarName": "7",
-          "SimulationModel": "BMW_35UP_SP2018_19KW20__[V07.001.032]",
-          "CurrentTeam": "TEST&VALIDATION",
-          "ServerWaitingTests": "5",
-          "CurrentComment": null,
-          "LabcarType": "HIL",
-          "Folders": null,
-          "projectBookingMissmatch": false,
-          "updated_at": "2020-07-13 12:14:41",
-          "created_at": "2020-07-13 12:14:41",
-          "labcar_id": 1
-        },
-        "owners": [
-          {
-            "id": 2,
-            "username": "dona",
-            "email": "andrei.don@zf.com",
-            "firstname": "Androi",
-            "lastname": "Don"
-          },
-          {
-            "id": 36,
-            "username": "stoicac1",
-            "email": "Catalin.Stoica@zf.com",
-            "firstname": "Catalin",
-            "lastname": "Stoica"
-          }
-        ]
-      }
+      "updated_at": "2019-08-30T11:44:35.023000Z"
     },
     {
       "id": "5f0c4f9687bb9c2ce8003d60",
@@ -131,36 +58,7 @@
       "testMode": null,
       "projectBookingMissmatch": null,
       "labcarType": null,
-      "updated_at": "2019-08-30T11:45:04.707000Z",
-      "labcar": {
-        "id": 2,
-        "labcarname": "10",
-        "visibility": "visible",
-        "hil": {
-          "_id": "5f0c50c287bb9c12d8006393",
-          "Date": "2020-07-13 12:17:06",
-          "MachineName": "KOBDE-CIATHIL5",
-          "OSVersion": "Microsoft Windows NT 6.1.7601 Service Pack 1",
-          "CurrentTeam": "Test&Validation",
-          "LabcarName": "10",
-          "CurrentComment": "new infrastructure tests!!!",
-          "ProjectName": "VW120 E-UP",
-          "SoftwareKey": "AVWS10GD_X067_CIAT_HiL",
-          "QueueKey": "AVWS10GD_X067_CIAT_HiL",
-          "ActivateKey": "True",
-          "ShareKey": "True",
-          "AutoRun": "False",
-          "Comment": "new infrastructure tests!!!",
-          "LocalDoneTests": "5",
-          "ServerWaitingTests": "0",
-          "SelectedServers": "TM_DEVELOPMENT",
-          "Folders": null,
-          "labcar_id": 2,
-          "updated_at": "2020-07-13 12:17:06",
-          "created_at": "2020-07-13 12:17:06"
-        },
-        "owners": []
-      }
+      "updated_at": "2019-08-30T11:45:04.707000Z"
     },
     {
       "id": "5f0c507887bb9c12d8006391",
@@ -190,35 +88,7 @@
       "testMode": null,
       "projectBookingMissmatch": null,
       "labcarType": "HIL",
-      "updated_at": "2019-08-30T11:45:19.743000Z",
-      "labcar": {
-        "id": 3,
-        "labcarname": "13",
-        "visibility": "visible",
-        "hil": {
-          "_id": "5f0c507887bb9c12d8006391",
-          "Date": "2020-07-13 12:15:52",
-          "MachineName": "KOBDE-LABCAR09",
-          "OSVersion": "Microsoft Windows NT 6.2.9200.0",
-          "PcUptime": "2 days 13 hours",
-          "Ipv4": "149.223.188.234",
-          "Remote": null,
-          "OfficialTestMode": "False",
-          "ServerWaitingTests": "0",
-          "ProjectName": "VW_MEB_EBB",
-          "LabcarName": "13",
-          "SelectedServers": "KO_CIAT_HIL_1",
-          "SimulationModel": "VeSTo_U_V2017_10_VW_NUVe_EBB__CIAT_056",
-          "CurrentTeam": "TEST&VALIDATION",
-          "CurrentComment": "maintenance !!!",
-          "LabcarType": "HIL",
-          "Folders": null,
-          "labcar_id": 3,
-          "updated_at": "2020-07-13 12:15:52",
-          "created_at": "2020-07-13 12:15:52"
-        },
-        "owners": []
-      }
+      "updated_at": "2019-08-30T11:45:19.743000Z"
     },
     {
       "id": "5f0c4ade87bb9c2ce8003d29",
@@ -248,32 +118,7 @@
       "testMode": null,
       "projectBookingMissmatch": false,
       "labcarType": null,
-      "updated_at": "2019-08-30T11:45:29.743000Z",
-      "labcar": {
-        "id": 4,
-        "labcarname": "19",
-        "visibility": "visible",
-        "hil": {
-          "_id": "5f0c4ade87bb9c2ce8003d29",
-          "Date": "2020-07-13 11:51:58",
-          "MachineName": "KOBDE-LABCAR27",
-          "OSVersion": "Microsoft Windows NT 6.2.9200.0",
-          "OfficialTestMode": "False",
-          "ProjectName": "VW_MEB_ESC",
-          "SelectedServers": "KO_CIAT_HIL_1",
-          "LabcarName": "19",
-          "ServerWaitingTests": "5",
-          "SimulationModel": "VeSTo_U_MP2017_10_VW_NUVeNEO_R07__CIAT_088",
-          "CurrentTeam": "Test&Validation",
-          "CurrentComment": null,
-          "Folders": null,
-          "projectBookingMissmatch": false,
-          "updated_at": "2020-07-13 11:51:58",
-          "created_at": "2020-07-13 11:51:58",
-          "labcar_id": 4
-        },
-        "owners": []
-      }
+      "updated_at": "2019-08-30T11:45:29.743000Z"
     }
   ]
 }
