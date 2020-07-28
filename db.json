@@ -151,34 +151,6 @@
       "localRunningTests": null,
       "localDoneTests": "5",
       "serverWaitingTests": "0",
-      "processes": [
-        {
-          "DisplayName": "Canape",
-          "Running": false
-        },
-        {
-          "DisplayName": "DVProject",
-          "Running": false,
-          "FileVersion": "2.0.0.2"
-        },
-        {
-          "DisplayName": "ControlDesk",
-          "Running": true,
-          "FileVersion": "3, 7, 4, 97"
-        },
-        {
-          "DisplayName": "TECAgent",
-          "Running": true,
-          "FileVersion": "2.1.6.3"
-        },
-        {
-          "DisplayName": "TestAutomation",
-          "Running": false,
-          "Path": "D:\\TestAutomation_08\\TestAutomation",
-          "FileVersion": "002-008",
-          "MatlabVersion": null
-        }
-      ],
       "folders": null,
       "selectedServers": "TM_DEVELOPMENT",
       "simulationModel": null,
@@ -211,34 +183,6 @@
           "LocalDoneTests": "5",
           "ServerWaitingTests": "0",
           "SelectedServers": "TM_DEVELOPMENT",
-          "Processes": [
-            {
-              "DisplayName": "Canape",
-              "Running": false
-            },
-            {
-              "DisplayName": "DVProject",
-              "Running": false,
-              "FileVersion": "2.0.0.2"
-            },
-            {
-              "DisplayName": "ControlDesk",
-              "Running": true,
-              "FileVersion": "3, 7, 4, 97"
-            },
-            {
-              "DisplayName": "TECAgent",
-              "Running": true,
-              "FileVersion": "2.1.6.3"
-            },
-            {
-              "DisplayName": "TestAutomation",
-              "Running": false,
-              "Path": "D:\\TestAutomation_08\\TestAutomation",
-              "FileVersion": "002-008",
-              "MatlabVersion": null
-            }
-          ],
           "Folders": null,
           "labcar_id": 2,
           "updated_at": "2020-07-13 12:17:06",
@@ -266,34 +210,6 @@
       "localRunningTests": null,
       "localDoneTests": null,
       "serverWaitingTests": "0",
-      "processes": [
-        {
-          "DisplayName": "Canape",
-          "Running": false
-        },
-        {
-          "DisplayName": "DVProject",
-          "Running": true,
-          "FileVersion": "1.13.6.3"
-        },
-        {
-          "DisplayName": "ControlDesk",
-          "Running": true,
-          "FileVersion": "8.2.0.442"
-        },
-        {
-          "DisplayName": "TECAgent",
-          "Running": true,
-          "FileVersion": "2.1.6.3"
-        },
-        {
-          "DisplayName": "TestAutomation",
-          "Running": false,
-          "Path": "D:\\TestAutomation_08\\TestAutomation",
-          "FileVersion": "[3.1.1.0]",
-          "MatlabVersion": null
-        }
-      ],
       "folders": null,
       "selectedServers": "KO_CIAT_HIL_1",
       "simulationModel": "VeSTo_U_V2017_10_VW_NUVe_EBB__CIAT_056",
@@ -325,34 +241,6 @@
           "CurrentTeam": "TEST&VALIDATION",
           "CurrentComment": "maintenance !!!",
           "LabcarType": "HIL",
-          "Processes": [
-            {
-              "DisplayName": "Canape",
-              "Running": false
-            },
-            {
-              "DisplayName": "DVProject",
-              "Running": true,
-              "FileVersion": "1.13.6.3"
-            },
-            {
-              "DisplayName": "ControlDesk",
-              "Running": true,
-              "FileVersion": "8.2.0.442"
-            },
-            {
-              "DisplayName": "TECAgent",
-              "Running": true,
-              "FileVersion": "2.1.6.3"
-            },
-            {
-              "DisplayName": "TestAutomation",
-              "Running": false,
-              "Path": "D:\\TestAutomation_08\\TestAutomation",
-              "FileVersion": "[3.1.1.0]",
-              "MatlabVersion": null
-            }
-          ],
           "Folders": null,
           "labcar_id": 3,
           "updated_at": "2020-07-13 12:15:52",
@@ -380,35 +268,6 @@
       "localRunningTests": null,
       "localDoneTests": null,
       "serverWaitingTests": "5",
-      "processes": [
-        {
-          "DisplayName": "Canape",
-          "Running": false,
-          "FileVersion": "14.0.40.22673"
-        },
-        {
-          "DisplayName": "DVProject",
-          "Running": true,
-          "FileVersion": "1.13.6.3"
-        },
-        {
-          "DisplayName": "ControlDesk",
-          "Running": true,
-          "FileVersion": "8.2.0.442"
-        },
-        {
-          "DisplayName": "TECAgent",
-          "Running": true,
-          "FileVersion": "2.1.6.3"
-        },
-        {
-          "DisplayName": "TestAutomation",
-          "Running": true,
-          "Path": "D:\\TestAutomation_08\\TestAutomation",
-          "FileVersion": "[3.1.1.0]",
-          "MatlabVersion": "MATLAB R2019b"
-        }
-      ],
       "folders": null,
       "selectedServers": "KO_CIAT_HIL_1",
       "simulationModel": "VeSTo_U_MP2017_10_VW_NUVeNEO_R07__CIAT_088",
@@ -436,35 +295,6 @@
           "SimulationModel": "VeSTo_U_MP2017_10_VW_NUVeNEO_R07__CIAT_088",
           "CurrentTeam": "Test&Validation",
           "CurrentComment": null,
-          "Processes": [
-            {
-              "DisplayName": "Canape",
-              "Running": false,
-              "FileVersion": "14.0.40.22673"
-            },
-            {
-              "DisplayName": "DVProject",
-              "Running": true,
-              "FileVersion": "1.13.6.3"
-            },
-            {
-              "DisplayName": "ControlDesk",
-              "Running": true,
-              "FileVersion": "8.2.0.442"
-            },
-            {
-              "DisplayName": "TECAgent",
-              "Running": true,
-              "FileVersion": "2.1.6.3"
-            },
-            {
-              "DisplayName": "TestAutomation",
-              "Running": true,
-              "Path": "D:\\TestAutomation_08\\TestAutomation",
-              "FileVersion": "[3.1.1.0]",
-              "MatlabVersion": "MATLAB R2019b"
-            }
-          ],
           "Folders": null,
           "projectBookingMissmatch": false,
           "updated_at": "2020-07-13 11:51:58",
@@ -493,34 +323,6 @@
       "localRunningTests": null,
       "localDoneTests": null,
       "serverWaitingTests": "0",
-      "processes": [
-        {
-          "DisplayName": "Canape",
-          "Running": false
-        },
-        {
-          "DisplayName": "DVProject",
-          "Running": true,
-          "FileVersion": "1.13.6.3"
-        },
-        {
-          "DisplayName": "ControlDesk",
-          "Running": true,
-          "FileVersion": "8.2.0.442"
-        },
-        {
-          "DisplayName": "TECAgent",
-          "Running": true,
-          "FileVersion": "2.3.3.2"
-        },
-        {
-          "DisplayName": "TestAutomation",
-          "Running": false,
-          "Path": "D:\\TestAutomation_08\\TestAutomation",
-          "FileVersion": "[3.1.1.1]",
-          "MatlabVersion": null
-        }
-      ],
       "folders": null,
       "selectedServers": "TM_TEC_HIL_1",
       "simulationModel": "BMW_35UP_SP2018_19KW20__[V07.001.030]",
@@ -558,34 +360,6 @@
           "QueueKey": "Labcar1TCS",
           "SoftwareKey": "BM06_P01_M11_S02_VTx_003_001_141_P_1_VTA_MT_DEVEL_BUILD_SUCCESS_78810",
           "Comment": null,
-          "Processes": [
-            {
-              "DisplayName": "Canape",
-              "Running": false
-            },
-            {
-              "DisplayName": "DVProject",
-              "Running": true,
-              "FileVersion": "1.13.6.3"
-            },
-            {
-              "DisplayName": "ControlDesk",
-              "Running": true,
-              "FileVersion": "8.2.0.442"
-            },
-            {
-              "DisplayName": "TECAgent",
-              "Running": true,
-              "FileVersion": "2.3.3.2"
-            },
-            {
-              "DisplayName": "TestAutomation",
-              "Running": false,
-              "Path": "D:\\TestAutomation_08\\TestAutomation",
-              "FileVersion": "[3.1.1.1]",
-              "MatlabVersion": null
-            }
-          ],
           "Folders": null,
           "projectBookingMissmatch": false,
           "updated_at": "2020-07-13 12:14:59",
@@ -614,34 +388,6 @@
       "localRunningTests": null,
       "localDoneTests": null,
       "serverWaitingTests": "0",
-      "processes": [
-        {
-          "DisplayName": "Canape",
-          "Running": false
-        },
-        {
-          "DisplayName": "DVProject",
-          "Running": true,
-          "FileVersion": "1.13.6.3"
-        },
-        {
-          "DisplayName": "ControlDesk",
-          "Running": true,
-          "FileVersion": "8.2.0.442"
-        },
-        {
-          "DisplayName": "TECAgent",
-          "Running": true,
-          "FileVersion": "2.1.6.3"
-        },
-        {
-          "DisplayName": "TestAutomation",
-          "Running": false,
-          "Path": "D:\\TestAutomation_08\\TestAutomation",
-          "FileVersion": "[3.1.2.0]",
-          "MatlabVersion": null
-        }
-      ],
       "folders": null,
       "selectedServers": "TM_TEC_HIL_1",
       "simulationModel": null,
@@ -678,34 +424,6 @@
           "Comment": null,
           "ServerWaitingTests": "0",
           "SelectedServers": "TM_TEC_HIL_1",
-          "Processes": [
-            {
-              "DisplayName": "Canape",
-              "Running": false
-            },
-            {
-              "DisplayName": "DVProject",
-              "Running": true,
-              "FileVersion": "1.13.6.3"
-            },
-            {
-              "DisplayName": "ControlDesk",
-              "Running": true,
-              "FileVersion": "8.2.0.442"
-            },
-            {
-              "DisplayName": "TECAgent",
-              "Running": true,
-              "FileVersion": "2.1.6.3"
-            },
-            {
-              "DisplayName": "TestAutomation",
-              "Running": false,
-              "Path": "D:\\TestAutomation_08\\TestAutomation",
-              "FileVersion": "[3.1.2.0]",
-              "MatlabVersion": null
-            }
-          ],
           "Folders": null,
           "labcar_id": 6,
           "updated_at": "2020-07-13 12:14:40",
@@ -733,34 +451,6 @@
       "localRunningTests": null,
       "localDoneTests": null,
       "serverWaitingTests": "628",
-      "processes": [
-        {
-          "DisplayName": "Canape",
-          "Running": false
-        },
-        {
-          "DisplayName": "DVProject",
-          "Running": true,
-          "FileVersion": "1.13.6.3"
-        },
-        {
-          "DisplayName": "ControlDesk",
-          "Running": true,
-          "FileVersion": "8.2.0.442"
-        },
-        {
-          "DisplayName": "TECAgent",
-          "Running": true,
-          "FileVersion": "2.1.6.3"
-        },
-        {
-          "DisplayName": "TestAutomation",
-          "Running": true,
-          "Path": "D:\\TestAutomation_08\\TestAutomation",
-          "FileVersion": "[3.1.1.0]",
-          "MatlabVersion": "MATLAB R2019b"
-        }
-      ],
       "folders": null,
       "selectedServers": "KO_CIAT_HIL_1",
       "simulationModel": "VeSTo_U_MP2017_10_VW_NUVeNEO_R07__CIAT_088",
@@ -790,34 +480,6 @@
           "CurrentTeam": "TEST&VALIDATION",
           "SelectedServers": "KO_CIAT_HIL_1",
           "ServerWaitingTests": "628",
-          "Processes": [
-            {
-              "DisplayName": "Canape",
-              "Running": false
-            },
-            {
-              "DisplayName": "DVProject",
-              "Running": true,
-              "FileVersion": "1.13.6.3"
-            },
-            {
-              "DisplayName": "ControlDesk",
-              "Running": true,
-              "FileVersion": "8.2.0.442"
-            },
-            {
-              "DisplayName": "TECAgent",
-              "Running": true,
-              "FileVersion": "2.1.6.3"
-            },
-            {
-              "DisplayName": "TestAutomation",
-              "Running": true,
-              "Path": "D:\\TestAutomation_08\\TestAutomation",
-              "FileVersion": "[3.1.1.0]",
-              "MatlabVersion": "MATLAB R2019b"
-            }
-          ],
           "Folders": null,
           "projectBookingMissmatch": false,
           "updated_at": "2020-07-13 12:13:22",
@@ -846,34 +508,6 @@
       "localRunningTests": null,
       "localDoneTests": null,
       "serverWaitingTests": "0",
-      "processes": [
-        {
-          "DisplayName": "Canape",
-          "Running": false
-        },
-        {
-          "DisplayName": "DVProject",
-          "Running": true,
-          "FileVersion": "1.13.6.3"
-        },
-        {
-          "DisplayName": "ControlDesk",
-          "Running": true,
-          "FileVersion": "8.2.0.442"
-        },
-        {
-          "DisplayName": "TECAgent",
-          "Running": true,
-          "FileVersion": "2.1.6.3"
-        },
-        {
-          "DisplayName": "TestAutomation",
-          "Running": false,
-          "Path": "D:\\TestAutomation_08\\TestAutomation",
-          "FileVersion": "[3.1.1.0]",
-          "MatlabVersion": null
-        }
-      ],
       "folders": null,
       "selectedServers": "TM_TEC_HIL_1",
       "simulationModel": "FIAT_B_SUV_2016b_[HIL_111]",
@@ -911,34 +545,6 @@
           "SelectedServers": "TM_TEC_HIL_1",
           "ServerWaitingTests": "0",
           "SimulationModel": "FIAT_B_SUV_2016b_[HIL_111]",
-          "Processes": [
-            {
-              "DisplayName": "Canape",
-              "Running": false
-            },
-            {
-              "DisplayName": "DVProject",
-              "Running": true,
-              "FileVersion": "1.13.6.3"
-            },
-            {
-              "DisplayName": "ControlDesk",
-              "Running": true,
-              "FileVersion": "8.2.0.442"
-            },
-            {
-              "DisplayName": "TECAgent",
-              "Running": true,
-              "FileVersion": "2.1.6.3"
-            },
-            {
-              "DisplayName": "TestAutomation",
-              "Running": false,
-              "Path": "D:\\TestAutomation_08\\TestAutomation",
-              "FileVersion": "[3.1.1.0]",
-              "MatlabVersion": null
-            }
-          ],
           "Folders": null,
           "labcar_id": 8,
           "updated_at": "2020-07-13 12:15:12",
@@ -966,34 +572,6 @@
       "localRunningTests": null,
       "localDoneTests": null,
       "serverWaitingTests": "25",
-      "processes": [
-        {
-          "DisplayName": "Canape",
-          "Running": false
-        },
-        {
-          "DisplayName": "DVProject",
-          "Running": true,
-          "FileVersion": "1.13.6.3"
-        },
-        {
-          "DisplayName": "ControlDesk",
-          "Running": true,
-          "FileVersion": "8.2.0.442"
-        },
-        {
-          "DisplayName": "TECAgent",
-          "Running": true,
-          "FileVersion": "2.1.6.3"
-        },
-        {
-          "DisplayName": "TestAutomation",
-          "Running": false,
-          "Path": "D:\\TestAutomation_08\\TestAutomation",
-          "FileVersion": "002-154dev",
-          "MatlabVersion": null
-        }
-      ],
       "folders": null,
       "selectedServers": "TM_TEC_HIL_1",
       "simulationModel": null,
@@ -1030,34 +608,6 @@
           "Comment": null,
           "ServerWaitingTests": "25",
           "SelectedServers": "TM_TEC_HIL_1",
-          "Processes": [
-            {
-              "DisplayName": "Canape",
-              "Running": false
-            },
-            {
-              "DisplayName": "DVProject",
-              "Running": true,
-              "FileVersion": "1.13.6.3"
-            },
-            {
-              "DisplayName": "ControlDesk",
-              "Running": true,
-              "FileVersion": "8.2.0.442"
-            },
-            {
-              "DisplayName": "TECAgent",
-              "Running": true,
-              "FileVersion": "2.1.6.3"
-            },
-            {
-              "DisplayName": "TestAutomation",
-              "Running": false,
-              "Path": "D:\\TestAutomation_08\\TestAutomation",
-              "FileVersion": "002-154dev",
-              "MatlabVersion": null
-            }
-          ],
           "Folders": null,
           "labcar_id": 9,
           "updated_at": "2020-07-13 12:14:23",
