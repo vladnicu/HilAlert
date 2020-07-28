@@ -16,10 +16,10 @@ export interface Hil{
   providedIn: 'root',
 })
 export class HilService {
-  private _url: string = 'http://localhost:3000/hils';
+  private url = 'https://my-json-server.typicode.com/vladnicu/HilAlert/hils';
   constructor(private http: HttpClient) {}
 
   getHil(): Observable<Hil[]> {
-    return this.http.get<Hil[]>(this._url);
+    return this.http.get<Hil[]>(this.url);
   }
 }

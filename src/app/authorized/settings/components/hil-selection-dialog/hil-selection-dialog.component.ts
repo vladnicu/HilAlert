@@ -15,7 +15,7 @@ export class HilSelectionDialogComponent implements OnInit {
   dataSource = new MatTableDataSource<Hil>();
 
   public initialSelection: Hil[] = [];
-  selection: SelectionModel<Hil>;
+  selection = new SelectionModel<Hil>(true, []);
 
   constructor(private hilService: HilService) {
   }
@@ -27,7 +27,7 @@ export class HilSelectionDialogComponent implements OnInit {
         this.dataSource.data = data;
         const savedHils: string[] = JSON.parse(localStorage.getItem('hils'));
         this.initialSelection = data.filter(x => savedHils.includes(x.labcarname));
-        this.selection = new SelectionModel<Hil>(true, this.initialSelection );
+        this.selection.select(...this.initialSelection);
       },
       (err) => console.log(err)
     );
@@ -41,7 +41,7 @@ export class HilSelectionDialogComponent implements OnInit {
   }
 
   /** Selects all rows if they are not all selected; otherwise clear selection. */
-  masterToggle() {
+  masterToggle(): void {
     this.isAllSelected() ?
         this.selection.clear() :
         this.dataSource.data.forEach(row => this.selection.select(row));

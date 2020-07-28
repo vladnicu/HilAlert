@@ -29,7 +29,7 @@
   "dataGroups": [
     {
       "name": "hils-api",
-      "urls": ["http://localhost:3000/hils"],
+      "urls": ["https://my-json-server.typicode.com/vladnicu/HilAlert/hils"],
       "cacheConfig": {
         "strategy": "freshness",
         "maxSize": 20,

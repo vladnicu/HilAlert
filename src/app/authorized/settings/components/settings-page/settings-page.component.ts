@@ -20,7 +20,9 @@ export class SettingsPageComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe((result: Hil[]) => {
-      localStorage.setItem('hils', JSON.stringify(result.map(x => x.labcarname)));
+      if (result) {
+        localStorage.setItem('hils', JSON.stringify(result.map(x => x.labcarname)));
+      }
     });
   }
 }
