@@ -4,6 +4,8 @@
     *ngFor="let hil of hils"
   >
     <mat-card class="example-card" [ngClass]="{ 'no-data': cardClasses(hil) }">
+      <div mat-card-avatar class="material-icons  md-48">drive_eta</div>
+   
       <mat-card-content>
         {{ hil.labcarname }} <br />
         {{ hil.machinename }} <br />
