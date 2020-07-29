@@ -1,0 +1,115 @@
+{
+  "configVersion": 1,
+  "timestamp": 1596031768324,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/1.e4e75769b7eff2f9f977.js",
+        "/5.9f62e9488db1b020f50c.js",
+        "/6.b55e7cea2ceb1c728c10.js",
+        "/7.f6aa0c171953ff19680e.js",
+        "/favicon.ico",
+        "/index.html",
+        "/main.db0c276e1bfc9a75b2fa.js",
+        "/manifest.webmanifest",
+        "/polyfills.df8df8924122ea727a19.js",
+        "/runtime.34221687243f674244a6.js",
+        "/styles.500f804c77074a09453c.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/assets/images/zf-logo.png",
+        "/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+        "/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+        "/fontawesome-webfont.8b43027f47b20503057d.eot",
+        "/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+        "/fontawesome-webfont.f691f37e57f04c152e23.woff"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "hils-api",
+      "patterns": [
+        "https:\\/\\/my-json-server\\.typicode\\.com\\/vladnicu\\/HilAlert\\/hils"
+      ],
+      "strategy": "freshness",
+      "maxSize": 20,
+      "maxAge": 3600000,
+      "timeoutMs": 5000,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
+    }
+  ],
+  "hashTable": {
+    "/1.e4e75769b7eff2f9f977.js": "43ae677621552b91daf4c6ee91c9125204d9703c",
+    "/5.9f62e9488db1b020f50c.js": "d0f8268758bda030cbc629dfa8f324e4d481a34b",
+    "/6.b55e7cea2ceb1c728c10.js": "6b2bf2a3131411d264498b0d0e03b4e2a52c63a0",
+    "/7.f6aa0c171953ff19680e.js": "112695332d4846332ef6b72e062c39044844e03c",
+    "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/assets/images/zf-logo.png": "aa75cb812f9f95c66920421e2e059d19da62ab7d",
+    "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf": "13b1eab65a983c7a73bc7997c479d66943f7c6cb",
+    "/fontawesome-webfont.20fd1704ea223900efa9.woff2": "d6f48cba7d076fb6f2fd6ba993a75b9dc1ecbf0c",
+    "/fontawesome-webfont.8b43027f47b20503057d.eot": "d980c2ce873dc43af460d4d572d441304499f400",
+    "/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg": "98a8aa5cf7d62c2eff5f07ede8d844b874ef06ed",
+    "/fontawesome-webfont.f691f37e57f04c152e23.woff": "28b782240b3e76db824e12c02754a9731a167527",
+    "/index.html": "6fe81e8db014e370bfe750e412b07181bdb1ec36",
+    "/main.db0c276e1bfc9a75b2fa.js": "90a077f86a41c60ef55b549c5f7325e1f8d75c54",
+    "/manifest.webmanifest": "f47dadb67af3abaf8340cd154ddf4b621d548cf2",
+    "/polyfills.df8df8924122ea727a19.js": "99facf9bee8da793cc8401108fb1e1fa7c6c4782",
+    "/runtime.34221687243f674244a6.js": "572762c73e7b5258070ce74e8a44a76eecbbba49",
+    "/styles.500f804c77074a09453c.css": "45ee44125bc8ccd4bb1b6d030e4ca379a0218ebe"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
