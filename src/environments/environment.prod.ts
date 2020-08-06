@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  apiUrl: 'https://powerful-anchorage-59625.herokuapp.com/api',
 };
