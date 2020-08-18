@@ -16,8 +16,13 @@ const matModules = [
   MatDialogModule,
   MatGridListModule,
   MatCardModule,
+<<<<<<< HEAD
   MatButtonModule,
   MatProgressSpinnerModule
+=======
+  MatButtonModule
+ 
+>>>>>>> ab0188f3e7072f91a183f2da6570fcdd3c7b62ad
 ];
 
 @NgModule({

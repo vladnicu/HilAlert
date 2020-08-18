@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
-
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 export interface Hil{
   machinename: string;
@@ -16,10 +16,9 @@ export interface Hil{
   providedIn: 'root',
 })
 export class HilService {
-  private url = 'https://my-json-server.typicode.com/vladnicu/HilAlert/hils';
   constructor(private http: HttpClient) {}
 
   getHil(): Observable<Hil[]> {
-    return this.http.get<Hil[]>(this.url);
+    return this.http.get<Hil[]>(environment.apiUrl + '/hils');
   }
 }

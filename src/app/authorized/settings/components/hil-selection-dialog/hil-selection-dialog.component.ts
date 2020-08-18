@@ -26,8 +26,10 @@ export class HilSelectionDialogComponent implements OnInit {
       (data) => {
         this.dataSource.data = data;
         const savedHils: string[] = JSON.parse(localStorage.getItem('hils'));
-        this.initialSelection = data.filter(x => savedHils.includes(x.labcarname));
-        this.selection.select(...this.initialSelection);
+        if (savedHils) {
+          this.initialSelection = data.filter(x => savedHils.includes(x.labcarname));
+          this.selection.select(...this.initialSelection);
+        }
       },
       (err) => console.log(err)
     );
