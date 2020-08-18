@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http'
-
+import { SharedModule } from './shared/shared.module';
 const routes: Routes = [
   {
     path: '',
@@ -13,6 +13,7 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes),
     HttpClientModule,
+    SharedModule
   ],
   exports: [RouterModule]
 })
