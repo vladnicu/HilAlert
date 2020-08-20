@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { HilService, Hil } from 'src/app/shared/services/hil.service';
 import { DatePipe, formatDate, ɵPLATFORM_WORKER_APP_ID } from '@angular/common';
+import { ThemePalette } from '@angular/material/core';
+import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
+import { HilsModule } from '../../hils.module';
 
 
 @Component({
@@ -10,24 +13,37 @@ import { DatePipe, formatDate, ɵPLATFORM_WORKER_APP_ID } from '@angular/common'
 })
 export class IndexComponent implements OnInit {
   public hils: Hil[] = [];
-
+  loading=true;;
+  color: ThemePalette = 'primary';
+  mode: ProgressSpinnerMode = 'indeterminate';
+  value = 50;
   constructor(private hilService: HilService){
     // this.myDate = this.datePipe.transform(this.myDate, 'yyyy-MM-dd');
-
+    
   }
 
+ 
   ngOnInit(): void {
+    
     this.hilService.getHil().subscribe(
       (data) => {
         const savedHils: string[] = JSON.parse(localStorage.getItem('hils'));
         if (savedHils) {
+          this.loading=false;
           this.hils = data.filter(x => savedHils.includes(x.labcarname));
+          
         } else {
+          this.loading=false;
           this.hils = data;
+          
         }
       },
       (err) => console.log(err)
+      
     );
+    
+
+    
   }
 
   cardClasses(hil: Hil): boolean{

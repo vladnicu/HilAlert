@@ -1,5 +1,20 @@
+<div class="wrapper" *ngIf='loading'>
+  <div class="inner">
+    <div >
+      <mat-progress-spinner 
+          [color]="color"
+          [mode]="mode"
+          [value]="value">
+        >
+        
+      </mat-progress-spinner>
+   </div >
+  </div>
+</div>
 <div class="row mt-4">
-  <div
+  
+  <div 
+    
     class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-6"
     *ngFor="let hil of hils"
   >

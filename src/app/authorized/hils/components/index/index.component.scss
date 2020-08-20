@@ -9,3 +9,19 @@
   }
 
   .material-icons.md-48 { font-size: 48px; }
+
+  .example-margin {
+    margin:0 auto;
+  }
+  .wrapper {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    height: calc(100vh - 20px);
+    
+  }
+  .inner {
+    
+    padding: 12px;
+  }
+  
