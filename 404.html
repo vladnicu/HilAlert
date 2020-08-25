@@ -34,10 +34,10 @@
       var channel = pusher.subscribe("new-hil-channel");
       channel.bind("new-hil-event", function (data) {
         alert(JSON.stringify(data));
-        window.navigator.vibrate(200); // vibrate for 200ms
+        window.navigator.vibrate() && window.navigator.vibrate(300);
       });
     </script>
-    <script src="runtime.a8b0ac73c8afad37d60b.js" defer></script>
+    <script src="runtime.aa29ae0ca40c0f832570.js" defer></script>
     <script src="polyfills.df8df8924122ea727a19.js" defer></script>
     <script src="main.64bf5aa06a52ac3bdfbe.js" defer></script>
   </body>
