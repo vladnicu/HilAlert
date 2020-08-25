@@ -1,5 +1,5 @@
-<div class="wrapper" *ngIf="loading">
-  <div class="inner">
+<div class="loader-wrapper" *ngIf="loading">
+  <div class="loader-inner">
     <div>
       <mat-progress-spinner color="primary" mode="indeterminate" value="50">
         >
@@ -9,15 +9,22 @@
 </div>
 <div class="row mt-4">
   <div
-    class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-6"
+    class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-6 mb-4"
     *ngFor="let hil of hils"
   >
     <mat-card class="example-card" [ngClass]="{ 'no-data': cardClasses(hil) }">
-      <div mat-card-avatar class="material-icons md-48">drive_eta</div>
+      <mat-card-header>
+        <img
+          mat-card-avatar
+          class="example-header-image"
+          src="{{ hil.projectname | projectIcon }}"
+          alt="{{ hil.projectname }}"
+        />
+        <mat-card-title>{{ hil.labcarname }}</mat-card-title>
+        <mat-card-subtitle> {{ hil.machinename }}</mat-card-subtitle>
+      </mat-card-header>
 
       <mat-card-content>
-        {{ hil.labcarname }} <br />
-        {{ hil.machinename }} <br />
         {{ hil.osversion }} <br />
         {{ hil.projectname }} <br />
         {{ hil.date | date }} <br />

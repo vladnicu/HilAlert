@@ -8,6 +8,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { ProjectIconPipe } from './pipes/project-icon.pipe';
 const matModules = [
   MatDialogModule,
   MatCheckboxModule,
@@ -21,13 +22,14 @@ const matModules = [
 ];
 
 @NgModule({
-  declarations: [],
+  declarations: [ProjectIconPipe],
   imports: [
     CommonModule,
     ...matModules
   ],
   exports: [
-    ...matModules
+    ...matModules,
+    ProjectIconPipe
   ]
 })
 export class SharedModule { }
