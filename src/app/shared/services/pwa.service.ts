@@ -21,6 +21,8 @@ export class PwaService {
   public initPwaPrompt() {
     if (this.platform.ANDROID) {
       window.addEventListener('beforeinstallprompt', (event: any) => {
+        console.log('install service');
+        
         event.preventDefault();
         this.promptEvent = event;
         this.openPromptComponent('android');
