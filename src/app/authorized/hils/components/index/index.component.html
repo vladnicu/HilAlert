@@ -17,17 +17,17 @@
         <img
           mat-card-avatar
           class="example-header-image"
-          src="{{ hil.projectname | projectIcon }}"
-          alt="{{ hil.projectname }}"
+          src="{{ hil.firsthilentry.projectname | projectIcon }}"
+          alt="{{ hil.firsthilentry.projectname }}"
         />
         <mat-card-title>{{ hil.labcarname }}</mat-card-title>
-        <mat-card-subtitle> {{ hil.machinename }}</mat-card-subtitle>
+        <mat-card-subtitle> {{ hil.firsthilentry.machinename }}</mat-card-subtitle>
       </mat-card-header>
 
       <mat-card-content>
-        {{ hil.osversion }} <br />
-        {{ hil.projectname }} <br />
-        {{ hil.date | date }} <br />
+        {{ hil.firsthilentry.osversion }} <br />
+        {{ hil.firsthilentry.projectname }} <br />
+        {{ hil.firsthilentry.date | date }} <br />
       </mat-card-content>
     </mat-card>
   </div>
