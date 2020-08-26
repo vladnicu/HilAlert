@@ -19,7 +19,7 @@ export class HilService {
   
   constructor(private http: HttpClient) {}
 
-  getHil(): Observable<Hil[]> {
+  getHils(): Observable<Hil[]> {
     return this.http.get<Hil[]>(environment.apiUrl + '/hils');
   }
 }

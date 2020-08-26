@@ -14,9 +14,9 @@ export class SettingsPageComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  openDialog(): void {
-    const dialogRef = this.dialog.open(HilSelectionDialogComponent,{
-      width: '500px'
+  openHilsSelectionDialog(): void {
+    const dialogRef = this.dialog.open(HilSelectionDialogComponent, {
+      width: '90%'
     });
 
     dialogRef.afterClosed().subscribe((result: Hil[]) => {

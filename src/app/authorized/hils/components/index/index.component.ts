@@ -16,9 +16,13 @@ export class IndexComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.hilService.getHil().subscribe(
+    this.getHils();
+  }
+
+  getHils(): void {
+    this.hilService.getHils().subscribe(
       (data) => {
-        const savedHils: string[] = JSON.parse(localStorage.getItem('hils'));
+        const savedHils: string[] = JSON.parse(localStorage.getItem('username'));
         if (savedHils) {
           this.hils = data.filter((x) => savedHils.includes(x.labcarname));
         } else {

@@ -22,7 +22,7 @@ export class HilSelectionDialogComponent implements OnInit {
 
   ngOnInit(): void
   {
-    this.hilService.getHil().subscribe(
+    this.hilService.getHils().subscribe(
       (data) => {
         this.dataSource.data = data;
         const savedHils: string[] = JSON.parse(localStorage.getItem('hils'));
