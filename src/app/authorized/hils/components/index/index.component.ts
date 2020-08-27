@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HilService, Hil } from 'src/app/shared/services/hil.service';
-import { ThemePalette } from '@angular/material/core';
-import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
 
 @Component({
   selector: 'app-index',
@@ -11,31 +9,30 @@ import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
 export class IndexComponent implements OnInit {
   public hils: Hil[] = [];
   loading = true;
+
   constructor(private hilService: HilService) {
-    // this.myDate = this.datePipe.transform(this.myDate, 'yyyy-MM-dd');
   }
 
   ngOnInit(): void {
-    this.getHils();
-  }
-
-  getHils(): void {
     this.hilService.getHils().subscribe(
       (data) => {
-        const savedHils: string[] = JSON.parse(localStorage.getItem('username'));
+        const savedHils: string[] = JSON.parse(localStorage.getItem('hils'));
         if (savedHils) {
+          this.loading = false;
           this.hils = data.filter((x) => savedHils.includes(x.labcarname));
+          console.log(data);
         } else {
+          this.loading = false;
           this.hils = data;
+          console.log(data);
         }
-        this.loading = false;
       },
       (err) => console.log(err)
     );
   }
 
   cardClasses(hil: Hil): boolean {
-    const hilDateStr = hil.date;
+    const hilDateStr = hil.firsthilentry.date;
     const hilDate = new Date(hilDateStr);
     const diff = Date.now() - hilDate.getTime();
     const minutes = Math.floor(diff / 1000 / 60);
