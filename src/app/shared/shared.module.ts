@@ -9,6 +9,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { ProjectIconPipe } from './pipes/project-icon.pipe';
+import { MatFormFieldModule } from '@angular/material/form-field';
 const matModules = [
   MatDialogModule,
   MatCheckboxModule,
@@ -18,7 +19,8 @@ const matModules = [
   MatGridListModule,
   MatCardModule,
   MatButtonModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatFormFieldModule
 ];
 
 @NgModule({

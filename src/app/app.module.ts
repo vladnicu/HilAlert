@@ -8,6 +8,9 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { PwaService } from 'src/app/shared/services/pwa.service';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
+
+import { FormsModule } from '@angular/forms';
+
 const initializer = (pwaService: PwaService) => () => pwaService.initPwaPrompt();
  
 @NgModule({
@@ -15,6 +18,8 @@ const initializer = (pwaService: PwaService) => () => pwaService.initPwaPrompt()
     AppComponent
   ],
   imports: [
+    
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

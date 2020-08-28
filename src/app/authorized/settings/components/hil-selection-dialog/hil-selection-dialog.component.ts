@@ -29,6 +29,7 @@ export class HilSelectionDialogComponent implements OnInit {
         if (savedHils) {
           this.initialSelection = data.filter(x => savedHils.includes(x.labcarname));
           this.selection.select(...this.initialSelection);
+          
         }
       },
       (err) => console.log(err)
