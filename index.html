@@ -18,7 +18,6 @@
     <meta name="theme-color" content="#1976d2" />
     <link rel="stylesheet" href="styles.500f804c77074a09453c.css" />
   </head>
-
   <body class="mat-typography">
     <app-root></app-root>
     <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
@@ -31,14 +30,14 @@
         cluster: "eu",
       });
 
-      var channel = pusher.subscribe("new-hil-channel");
+      var channel = pusher.subscribe("general");
       channel.bind("new-hil-event", function (data) {
         alert(JSON.stringify(data));
-        window.navigator.vibrate() && window.navigator.vibrate(300);
+        window.navigator.vibrate(200); // vibrate for 200ms
       });
     </script>
-    <script src="runtime.aa29ae0ca40c0f832570.js" defer></script>
+    <script src="runtime.6caf8b4664285646566d.js" defer></script>
     <script src="polyfills.df8df8924122ea727a19.js" defer></script>
-    <script src="main.64bf5aa06a52ac3bdfbe.js" defer></script>
+    <script src="main.6f5ce84f24b0d8005900.js" defer></script>
   </body>
 </html>
