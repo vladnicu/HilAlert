@@ -4,13 +4,13 @@
               <form class="example-form">
                 <mat-form-field class="example-full-width">
                   <mat-label >Username </mat-label>
-                  <input matInput placeholder="Enter your username" >
+                  <input matInput [(ngModel)]="user.username" name="user" placeholder="Enter your username" >
                 </mat-form-field>
     
         
 
     <mat-dialog-actions align="end">
-        <button mat-raised-button color="primary" [mat-dialog-close]="user" (click)="onSubmit()">
+        <button mat-raised-button color="primary" [mat-dialog-close]="user.username" (click)="onSubmit()">
             Save and close
         </button>
     </mat-dialog-actions>

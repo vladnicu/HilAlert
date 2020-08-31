@@ -29,4 +29,5 @@ export class HilService {
   getHils(): Observable<Hil[]> {
     return this.http.get<Hil[]>(environment.apiUrl+ '/hils');
   }
+  
 }

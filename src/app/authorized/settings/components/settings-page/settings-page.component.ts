@@ -3,6 +3,7 @@ import { HilSelectionDialogComponent } from '../hil-selection-dialog/hil-selecti
 import { MatDialog } from '@angular/material/dialog';
 
 import { Hil } from 'src/app/shared/services/hil.service';
+import { User } from 'src/app/shared/services/user.service';
 
 @Component({
   selector: 'app-settings-page',
@@ -11,6 +12,10 @@ import { Hil } from 'src/app/shared/services/hil.service';
 })
 export class SettingsPageComponent implements OnInit {
   constructor(public dialog: MatDialog) {}
+  user:  User = {
+    username: null,
+    
+  };
 
   ngOnInit(): void {}
 
@@ -22,6 +27,7 @@ export class SettingsPageComponent implements OnInit {
     dialogRef.afterClosed().subscribe((result: Hil[]) => {
       if (result) {
         localStorage.setItem('hils', JSON.stringify(result.map(x => x.labcarname)));
+        
       }
     });
   }
