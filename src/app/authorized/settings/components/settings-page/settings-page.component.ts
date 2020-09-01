@@ -3,6 +3,7 @@ import { HilSelectionDialogComponent } from '../hil-selection-dialog/hil-selecti
 import { MatDialog } from '@angular/material/dialog';
 
 import { Hil } from 'src/app/shared/services/hil.service';
+import { User, UserService } from 'src/app/shared/services/user.service';
 
 @Component({
   selector: 'app-settings-page',
@@ -10,7 +11,7 @@ import { Hil } from 'src/app/shared/services/hil.service';
   styleUrls: ['./settings-page.component.scss'],
 })
 export class SettingsPageComponent implements OnInit {
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog, private userService : UserService) {}
 
   ngOnInit(): void {}
 

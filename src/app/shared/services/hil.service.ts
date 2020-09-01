@@ -15,10 +15,17 @@ export interface HilEntry {
   date: string;
 }
 
+export interface Hil{
+  labcarname: string;
+  firsthilentry: HilEntry;
+}
+
+
 @Injectable({
   providedIn: 'root',
 })
 export class HilService {
+
   constructor(private http: HttpClient) {}
   getHils(): Observable<Hil[]> {
     return this.http.get<Hil[]>(environment.apiUrl + '/hils');
