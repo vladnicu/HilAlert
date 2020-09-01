@@ -12,9 +12,8 @@ export interface HilEntry{
 }
 
 export interface Hil{
-  
   labcarname: string;
-  firsthilentry : HilEntry;
+  firsthilentry: HilEntry;
 }
 
 
@@ -23,11 +22,9 @@ export interface Hil{
   providedIn: 'root',
 })
 export class HilService {
-  
+
   constructor(private http: HttpClient) {}
-  //private url : 'http://hilalertbackend.test/api/hils';
   getHils(): Observable<Hil[]> {
-    return this.http.get<Hil[]>(environment.apiUrl+ '/hils');
+    return this.http.get<Hil[]>(environment.apiUrl + '/hils');
   }
-  
 }

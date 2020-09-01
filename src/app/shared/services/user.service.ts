@@ -1,42 +1,29 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Hil } from './hil.service';
+import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 export interface User {
-
   username: string;
   hils: Hil[];
 }
 
 const httpOptions = {
   headers: new HttpHeaders({
-    'Content-Type':  'application/json',
-    Authorization: 'my-auth-token'
-  })
+    'Content-Type': 'application/json',
+
+  }),
 };
 
-
-
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-
 export class UserService {
-  
-  constructor(private http: HttpClient) { 
+  constructor(private http: HttpClient) {}
 
-
-  }
-  
-  login(data ){
-    return this.http.post<User>('http://hilalertbackend.test/api/login', data, httpOptions);
-    //return this.http.post('http://hilalertbackend.test/api/login', data as User);
+  login(username: string): Observable<User> {
+    return this.http.post<User>(environment.apiUrl + '/login', {username});
   }
 
-  
-  sendUser(data ){
-    console.log('request sent!');
-    return this.http.post<User>('http://hilalertbackend.test/api/username', data, httpOptions);
-    //return this.http.post('http://hilalertbackend.test/api/login', data as User);
-  }
 }

@@ -29,7 +29,7 @@
         cluster: "eu",
       });
 
-      var channel = pusher.subscribe("new-hil-channel");
+      var channel = pusher.subscribe("general");
       channel.bind("new-hil-event", function (data) {
         alert(JSON.stringify(data));
         window.navigator.vibrate(200); // vibrate for 200ms

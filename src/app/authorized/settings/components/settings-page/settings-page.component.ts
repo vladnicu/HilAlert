@@ -11,12 +11,7 @@ import { User, UserService } from 'src/app/shared/services/user.service';
   styleUrls: ['./settings-page.component.scss'],
 })
 export class SettingsPageComponent implements OnInit {
-  user:  User = {
-    username: null,
-    hils : null
-  };
   constructor(public dialog: MatDialog, private userService : UserService) {}
-  
 
   ngOnInit(): void {}
 
@@ -28,12 +23,6 @@ export class SettingsPageComponent implements OnInit {
     dialogRef.afterClosed().subscribe((result: Hil[]) => {
       if (result) {
         localStorage.setItem('hils', JSON.stringify(result.map(x => x.labcarname)));
-       
-        this.user.username=localStorage.getItem('user');
-        this.user.hils = result;
-        
-        this.userService.sendUser(this.user);
-        console.log(this.user);
       }
     });
   }
