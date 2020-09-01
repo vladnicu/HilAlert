@@ -14,7 +14,9 @@ export class LogindialogComponent implements OnInit {
 
   user:  User = {
     username: null,
-  
+    hils:null,
+
+    
   };
 
   
