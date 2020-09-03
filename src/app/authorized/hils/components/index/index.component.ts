@@ -35,8 +35,10 @@ export class IndexComponent implements OnInit {
         const savedHils: string[] = JSON.parse(localStorage.getItem('hils'));
         if (savedHils) {
           this.hils = data.filter((x) => savedHils.includes(x.labcarname));
+         
         } else {
           this.hils = data;
+          
         }
         this.loading = false;
       },
