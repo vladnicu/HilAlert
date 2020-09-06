@@ -41,6 +41,16 @@
     </table>
   </mat-dialog-content>
   
+  <div class="loader-wrapper" *ngIf="loading">
+    <div class="loader-inner">
+      <div>
+        <mat-progress-spinner color="primary" mode="indeterminate" value="50">
+          >
+        </mat-progress-spinner>
+      </div>
+    </div>
+  </div>
+
   <mat-dialog-actions align="end">
     <button
       mat-raised-button
