@@ -5,9 +5,10 @@ import { SettingsPageComponent } from './components/settings-page/settings-page.
 import { SharedModule } from './../../shared/shared.module';
 import { HilSelectionDialogComponent } from './components/hil-selection-dialog/hil-selection-dialog.component';
 import { SettingsMenuItemComponent } from './components/settings-menu-item/settings-menu-item.component';
+import { PropertiesSelectionDialogComponent } from './components/properties-selection-dialog/properties-selection-dialog.component';
 
 @NgModule({
-  declarations: [SettingsPageComponent, HilSelectionDialogComponent, SettingsMenuItemComponent],
+  declarations: [SettingsPageComponent, HilSelectionDialogComponent, SettingsMenuItemComponent, PropertiesSelectionDialogComponent],
   imports: [
     CommonModule,
     SettingsRoutingModule,
