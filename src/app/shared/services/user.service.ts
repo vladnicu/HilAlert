@@ -6,9 +6,8 @@ import { environment } from 'src/environments/environment';
 import { Property } from './property.service';
 
 export interface User {
+  id: number;
   username: string;
-  hils: Hil[];
-  properties: Property[];
 }
 
 const httpOptions = {
@@ -28,7 +27,8 @@ export class UserService {
     return this.http.post<User>(environment.apiUrl + '/login', {username});
   }
 
-  sendHils(username: string): Observable<User> {
-    return this.http.patch<User>(environment.apiUrl + '/user/${id}', {username});
+  sendHils(username, hils: Array<number>): Observable<any> {
+    return this.http.patch<any>(environment.apiUrl + '/users/'+ username, {hils});
   }
+  
 }

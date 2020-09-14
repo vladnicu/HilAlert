@@ -31,7 +31,7 @@ export class PropertiesSelectionDialogComponent implements OnInit {
   ngOnInit(): void {
     this.propertyService.getProperties().subscribe(
       (data) => {
-        console.log(data);
+        
         this.dataSource.data = data;
         const savedHils: string[] = JSON.parse(localStorage.getItem('properties'));
         if (savedHils) {

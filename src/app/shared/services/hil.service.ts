@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 export interface Hil {
+  id: number;
   labcarname: string;
   firsthilentry: HilEntry;
 }

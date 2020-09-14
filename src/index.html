@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -22,6 +23,8 @@
     <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
+      
+      console.log(localStorage.getItem('username'));
       // Enable pusher logging - don't include this in production
       Pusher.logToConsole = true;
 
@@ -31,6 +34,11 @@
 
       var channel = pusher.subscribe("general");
       channel.bind("new-hil-event", function (data) {
+        alert(JSON.stringify(data));
+        window.navigator.vibrate(200); // vibrate for 200ms
+      });
+      var channel = pusher.subscribe(localStorage.getItem('username'));
+      channel.bind("property-changed", function (data) {
         alert(JSON.stringify(data));
         window.navigator.vibrate(200); // vibrate for 200ms
       });
