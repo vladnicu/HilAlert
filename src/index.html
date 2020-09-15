@@ -1,47 +1,46 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>HilAlert</title>
-    <base href="/" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link rel="manifest" href="manifest.webmanifest" />
-    <meta name="theme-color" content="#1976d2" />
-  </head>
-  <body class="mat-typography">
-    <app-root></app-root>
-    <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-      
-      console.log(localStorage.getItem('username'));
-      // Enable pusher logging - don't include this in production
-      Pusher.logToConsole = true;
 
-      var pusher = new Pusher("42035f70e795d8c89b15", {
-        cluster: "eu",
-      });
+<head>
+  <meta charset="utf-8" />
+  <title>HilAlert</title>
+  <base href="/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#1976d2" />
+</head>
 
-      var channel = pusher.subscribe("general");
-      channel.bind("new-hil-event", function (data) {
-        alert(JSON.stringify(data));
-        window.navigator.vibrate(200); // vibrate for 200ms
-      });
-      var channel = pusher.subscribe(localStorage.getItem('username'));
-      channel.bind("property-changed", function (data) {
-        alert(JSON.stringify(data));
-        window.navigator.vibrate(200); // vibrate for 200ms
-      });
-    </script>
-  </body>
+<body class="mat-typography">
+  <app-root></app-root>
+  <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    // Enable pusher logging - don't include this in production
+    Pusher.logToConsole = true;
+    var pusher = new Pusher("42035f70e795d8c89b15", {
+      cluster: "eu",
+    });
+    var channel = pusher.subscribe("general");
+    channel.bind("new-hil-event", function (data) {
+      alert(JSON.stringify(data));
+      window.navigator.vibrate(200); // vibrate for 200ms
+    });
+    channel.bind("no-data-retrieved", function (data) {
+      alert(JSON.stringify(data));
+      window.navigator.vibrate(200); // vibrate for 200ms
+    });
+    var channel = pusher.subscribe(localStorage.getItem('username'));
+    channel.bind("property-changed", function (data) {
+      alert(JSON.stringify(data));
+      window.navigator.vibrate(200); // vibrate for 200ms
+    });
+    
+    
+  </script>
+</body>
+
 </html>

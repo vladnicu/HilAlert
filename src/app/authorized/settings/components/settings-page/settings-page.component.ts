@@ -15,25 +15,20 @@ import { PropertyService } from 'src/app/shared/services/property.service';
 })
 export class SettingsPageComponent implements OnInit {
   constructor(public dialog: MatDialog, private userService: UserService, private propertyService: PropertyService) { }
-  username = localStorage.getItem('username');
-  numberArrayProperties: Array<number> = [];
-  numberArrayHils: Array<number> = [];
+  username = localStorage.getItem('username');  
   ngOnInit(): void { }
-
   openHilsSelectionDialog(): void {
     const dialogRef = this.dialog.open(HilSelectionDialogComponent, {
       width: '90%'
     });
-
     dialogRef.afterClosed().subscribe((result: Hil[]) => {
+      const numberArrayHils: Array<number> = [];
+      localStorage.setItem('hils', JSON.stringify(result.map(x => x.labcarname)));
       if (result) {
         for (let entry of result) {
-
-          this.numberArrayHils.push(entry.id);
+          numberArrayHils.push(entry.id);
         }
-        
-        console.log(this.numberArrayHils);
-        this.userService.sendHils(this.username, this.numberArrayHils).subscribe(
+        this.userService.sendHils(this.username, numberArrayHils).subscribe(
           (data) => console.log(data),
           (error) => console.log(error)
         );
@@ -45,15 +40,14 @@ export class SettingsPageComponent implements OnInit {
       width: '30%',
       height: '80%'
     });
-
     dialogRef.afterClosed().subscribe((result) => {
+      const numberArrayProperties: Array<number> = [];
       if (result) {
+        localStorage.setItem('properties', JSON.stringify(result.map(x => x.name)));
         for (let entry of result) {
-
-          this.numberArrayProperties.push(entry.id);
+          numberArrayProperties.push(entry.id);
         }
-
-        this.propertyService.sendProperties(this.username, this.numberArrayProperties).subscribe(
+        this.propertyService.sendProperties(this.username, numberArrayProperties).subscribe(
           (data) => console.log(data),
           (error) => console.log(error)
         );

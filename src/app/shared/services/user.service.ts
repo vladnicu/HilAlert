@@ -1,34 +1,26 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Hil } from './hil.service';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Property } from './property.service';
-
 export interface User {
   id: number;
   username: string;
 }
-
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json',
 
   }),
 };
-
 @Injectable({
   providedIn: 'root',
 })
 export class UserService {
-  constructor(private http: HttpClient) {}
-
+  constructor(private http: HttpClient) { }
   login(username: string): Observable<User> {
-    return this.http.post<User>(environment.apiUrl + '/login', {username});
+    return this.http.post<User>(environment.apiUrl + '/login', { username });
   }
-
   sendHils(username, hils: Array<number>): Observable<any> {
-    return this.http.patch<any>(environment.apiUrl + '/users/'+ username, {hils});
+    return this.http.patch<any>(environment.apiUrl + '/users/' + username, { hils });
   }
-  
 }
