@@ -1,14 +1,12 @@
 import {
   Component,
   OnInit,
-  ɵCompiler_compileModuleSync__POST_R3__,
 } from '@angular/core';
 import { HilService, Hil } from 'src/app/shared/services/hil.service';
-import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-
+import { MatDialog } from '@angular/material/dialog';
 import { LogindialogComponent } from '../logindialog/logindialog.component';
-import { HttpClient } from '@angular/common/http';
-import { User, UserService } from 'src/app/shared/services/user.service';
+import { UserService } from 'src/app/shared/services/user.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-index',
@@ -22,7 +20,8 @@ export class IndexComponent implements OnInit {
   constructor(
     private hilService: HilService,
     public dialog: MatDialog,
-    private userService: UserService
+    private userService: UserService,
+    private toastr: ToastrService,
   ) {}
 
   ngOnInit(): void {
@@ -35,10 +34,8 @@ export class IndexComponent implements OnInit {
         const savedHils: string[] = JSON.parse(localStorage.getItem('hils'));
         if (savedHils) {
           this.hils = data.filter((x) => savedHils.includes(x.labcarname));
-         
         } else {
           this.hils = data;
-          
         }
         this.loading = false;
       },
@@ -47,11 +44,14 @@ export class IndexComponent implements OnInit {
   }
 
   openUserDialog(): void {
-    const dialogRef = this.dialog.open(LogindialogComponent, {});
+    const dialogRef = this.dialog.open(LogindialogComponent, {disableClose: true});
 
     dialogRef.afterClosed().subscribe((username: string) => {
       this.userService.login(username).subscribe(
-        (data) => localStorage.setItem('username', data.username),
+        (data) => {
+          localStorage.setItem('username', data.username);
+          this.toastr.success('Welcome', 'Success!');
+        },
         (error) => console.log(error)
       );
     });

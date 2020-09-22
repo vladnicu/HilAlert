@@ -8,7 +8,7 @@ import {MatTableDataSource} from '@angular/material/table';
   styleUrls: ['./hil-selection-dialog.component.scss']
 })
 export class HilSelectionDialogComponent implements OnInit {
-  displayedColumns: string[] = ['select', 'machinename', 'labcarname'];
+  displayedColumns: string[] = ['select', 'labcarname'];
   dataSource = new MatTableDataSource<Hil>();
   loading = true;
   public initialSelection: Hil[] = [];
@@ -25,7 +25,7 @@ export class HilSelectionDialogComponent implements OnInit {
           this.initialSelection = data.filter(x => savedHils.includes(x.labcarname));
           this.selection.select(...this.initialSelection);
         }
-        this.loading=false;
+        this.loading = false;
       },
       (err) => console.log(err)
     );

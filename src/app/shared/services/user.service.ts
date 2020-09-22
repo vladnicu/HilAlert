@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { Router } from '@angular/router';
 export interface User {
   id: number;
   username: string;
@@ -16,11 +17,18 @@ const httpOptions = {
   providedIn: 'root',
 })
 export class UserService {
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
+
   login(username: string): Observable<User> {
     return this.http.post<User>(environment.apiUrl + '/login', { username });
   }
+
   sendHils(username, hils: Array<number>): Observable<any> {
     return this.http.patch<any>(environment.apiUrl + '/users/' + username, { hils });
+  }
+
+  logout(): void {
+    localStorage.removeItem('username');
+    this.router.navigate(['/']);
   }
 }

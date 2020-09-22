@@ -8,7 +8,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { PwaService } from 'src/app/shared/services/pwa.service';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
-
+import { ToastrModule } from 'ngx-toastr';
 import { FormsModule } from '@angular/forms';
 
 const initializer = (pwaService: PwaService) => () => pwaService.initPwaPrompt();
@@ -18,15 +18,14 @@ const initializer = (pwaService: PwaService) => () => pwaService.initPwaPrompt()
     AppComponent
   ],
   imports: [
-    
     FormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    ToastrModule.forRoot()
   ],
-  
   providers: [
     {provide: MatBottomSheet, useValue: {} },
     {provide: APP_INITIALIZER, useFactory: initializer, deps: [PwaService], multi: true},],

@@ -1,9 +1,14 @@
+table {
+  width: 100%;
+  
+}
+
 .loader-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 20px);
-    .loader-inner {
-      padding: 12px;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 20px);
+  .loader-inner {
+    padding: 12px;
   }
+}

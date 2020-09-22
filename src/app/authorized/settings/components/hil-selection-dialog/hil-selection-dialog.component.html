@@ -1,7 +1,6 @@
-
 <mat-dialog-content class="mat-typography">
   <h2>Hil Selection</h2>
-  
+
   <table mat-table [dataSource]="dataSource">
     <!-- Checkbox Column -->
     <ng-container matColumnDef="select">
@@ -22,14 +21,6 @@
           [aria-label]="checkboxLabel(row)"
         >
         </mat-checkbox>
-      </td>
-    </ng-container>
-
-    <!-- machinename Column -->
-    <ng-container matColumnDef="machinename">
-      <th mat-header-cell *matHeaderCellDef>Machine name</th>
-      <td mat-cell *matCellDef="let element">
-        {{ element.firsthilentry.machinename }}
       </td>
     </ng-container>
 

@@ -11,11 +11,33 @@
     Hil Alert
   </a>
 
-  <button
-    type="button"
-    class="btn btn-success pull-right"
-    routerLink="/settings"
-  >
-    Settings
-  </button>
+  <div class="dropdown" *ngIf="username">
+    <button
+      class="btn btn-secondary btn-sm dropdown-toggle"
+      type="button"
+      id="dropdownMenuUser"
+      data-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+    >
+      <i class="fa fa-user-o"></i> {{ username }}
+    </button>
+    <div
+      class="dropdown-menu dropdown-menu-right"
+      aria-labelledby="dropdownMenuUser"
+    >
+      <button
+        class="dropdown-item"
+        type="button"
+        routerLink="/settings"
+        routerLinkActive="active"
+      >
+        Settings
+      </button>
+      <div class="dropdown-divider"></div>
+      <button class="dropdown-item" type="button" (click)="logout()">
+        Logout
+      </button>
+    </div>
+  </div>
 </nav>
