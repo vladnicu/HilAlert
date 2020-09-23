@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -16,8 +17,9 @@
     />
     <link rel="manifest" href="manifest.webmanifest" />
     <meta name="theme-color" content="#1976d2" />
-    <link rel="stylesheet" href="styles.500f804c77074a09453c.css" />
+    <link rel="stylesheet" href="styles.dd5b2da75255b7ff40dc.css" />
   </head>
+
   <body class="mat-typography">
     <app-root></app-root>
     <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
@@ -25,19 +27,27 @@
     <script>
       // Enable pusher logging - don't include this in production
       Pusher.logToConsole = true;
-
       var pusher = new Pusher("31977acdf3ac9290e324", {
         cluster: "eu",
       });
-
       var channel = pusher.subscribe("general");
       channel.bind("new-hil-event", function (data) {
         alert(JSON.stringify(data));
         window.navigator.vibrate(200); // vibrate for 200ms
       });
+      channel.bind("no-data-retrieved", function (data) {
+        alert(JSON.stringify(data));
+        window.navigator.vibrate(200); // vibrate for 200ms
+      });
+      var channel = pusher.subscribe(localStorage.getItem("alert_user"));
+      channel.bind("property-changed", function (data) {
+        alert(JSON.stringify(data));
+        window.navigator.vibrate(200); // vibrate for 200ms
+      });
     </script>
-    <script src="runtime.b597b3189c5468bcc9da.js" defer></script>
+    <script src="runtime.3d24a9034cddd467b29a.js" defer></script>
     <script src="polyfills.df8df8924122ea727a19.js" defer></script>
-    <script src="main.d1e736d570c85ddfc2fe.js" defer></script>
+    <script src="scripts.2b9f9610fbe1e544e9bb.js" defer></script>
+    <script src="main.6a203d84bd09bc16bf78.js" defer></script>
   </body>
 </html>
