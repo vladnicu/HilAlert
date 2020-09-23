@@ -25,7 +25,7 @@ export class IndexComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    if (localStorage.getItem('username') === null) {
+    if (localStorage.getItem('alert_user') === null) {
       this.openUserDialog();
     }
 
@@ -49,8 +49,8 @@ export class IndexComponent implements OnInit {
     dialogRef.afterClosed().subscribe((username: string) => {
       this.userService.login(username).subscribe(
         (data) => {
-          localStorage.setItem('username', data.username);
           this.toastr.success('Welcome', 'Success!');
+          window.location.reload();
         },
         (error) => console.log(error)
       );

@@ -9,10 +9,16 @@ export class TopBarComponent implements OnInit {
   username: string;
 
   constructor(private userService: UserService) {
-    this.username = localStorage.getItem('username');
    }
 
   ngOnInit(): void {
+    // this.username = this.userService.getAuthValue.username;
+
+    this.userService.authSubject.subscribe(user => {
+      if (user) {
+        this.username = user.username;
+      }
+    });
   }
 
   logout(): void {

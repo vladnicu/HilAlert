@@ -3,7 +3,7 @@ import { HilSelectionDialogComponent } from '../hil-selection-dialog/hil-selecti
 import { MatDialog } from '@angular/material/dialog';
 
 import { Hil } from 'src/app/shared/services/hil.service';
-import { User, UserService } from 'src/app/shared/services/user.service';
+import { UserService } from 'src/app/shared/services/user.service';
 import { PropertiesSelectionDialogComponent } from '../properties-selection-dialog/properties-selection-dialog.component';
 import { PropertyService } from 'src/app/shared/services/property.service';
 import { ToastrService } from 'ngx-toastr';
