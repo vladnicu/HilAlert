@@ -12,11 +12,7 @@
     class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 mb-4"
     *ngFor="let hil of hils"
   >
-    <mat-card
-      *ngIf="hil.firsthilentry"
-      class="example-card"
-      [ngClass]="{ 'no-data': cardClasses(hil) }"
-    >
+    <mat-card *ngIf="hil.firsthilentry" class="example-card">
       <mat-card-header>
         <img
           mat-card-avatar
@@ -33,7 +29,7 @@
       <mat-card-content>
         {{ hil.firsthilentry.osversion }} <br />
         {{ hil.firsthilentry.projectname }} <br />
-        {{ hil.firsthilentry.date | date }} <br />
+        {{ hil.firsthilentry.date | date: "medium" }} <br />
       </mat-card-content>
     </mat-card>
   </div>

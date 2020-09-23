@@ -22,7 +22,7 @@ export class SettingsPageComponent implements OnInit {
     private toastr: ToastrService,
   ) {}
 
-  username = localStorage.getItem('username');
+  username = this.userService.getAuthValue.username;
 
   ngOnInit(): void {}
 
@@ -31,12 +31,12 @@ export class SettingsPageComponent implements OnInit {
       width: '30%',
     });
     dialogRef.afterClosed().subscribe((result: Hil[]) => {
-      const numberArrayHils: Array<number> = [];
-      localStorage.setItem(
-        'hils',
-        JSON.stringify(result.map((x) => x.labcarname))
-      );
       if (result) {
+        localStorage.setItem(
+          'hils',
+          JSON.stringify(result.map((x) => x.labcarname))
+        );
+        const numberArrayHils: Array<number> = [];
         for (const entry of result) {
           numberArrayHils.push(entry.id);
         }
