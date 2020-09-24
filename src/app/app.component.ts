@@ -15,7 +15,6 @@ export class AppComponent {
       e.preventDefault();
 
       console.log('install constructor app');
-      
     });
 
     updates.available.subscribe((event) => {
@@ -26,30 +25,6 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    
-    this.pushSubscription();
 
-    this.swPush.messages.subscribe((message) => console.log(message));
-
-    this.swPush.notificationClicks.subscribe(({ action, notification }) => {
-      window.open(notification.data.url);
-    });
-  }
-
-  pushSubscription() {
-    if (!this.swPush.isEnabled) {
-      console.log('Notification is not enabled');
-      return;
-    }
-    this.swPush
-      .requestSubscription({
-        serverPublicKey:
-          'BO2x-nfiBpN7H8taJcGe03EvXVW_NJ7AgpyZQ7bXXmb0Z0JskQ7jmo6HkGspiXlCdy5hQyXjyLbLooflNIUlDhQ',
-      })
-      .then((sub) => {
-        // Make a post call to serve
-        console.log(JSON.stringify(sub));
-      })
-      .catch((err) => console.log(err));
   }
 }

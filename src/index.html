@@ -31,11 +31,11 @@
 
           // Enable pusher logging - don't include this in production
           Pusher.logToConsole = true;
-          var pusher = new Pusher("42035f70e795d8c89b15", {
+          var pusher = new Pusher("31977acdf3ac9290e324", {
             cluster: "eu",
           });
 
-          user = localStorage.getItem("username");
+          user = JSON.parse(localStorage.getItem("alert_user")).username;
           title = "Hey " + user + "!";
 
           var channel = pusher.subscribe("general");
@@ -79,7 +79,7 @@
             .then(function (result) {
               console.log(result); //granted || denied
               if (Notification.permission == "granted") {
-                doNotify("The Title");
+                doNotify("Permissions granted!");
               }
             })
             .catch((err) => {
