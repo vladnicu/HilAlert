@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1600934313630,
+  "timestamp": 1600934896901,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -69,7 +69,7 @@
     {
       "name": "hils-api",
       "patterns": [
-        "https:\\/\\/my-json-server\\.typicode\\.com\\/vladnicu\\/HilAlert\\/hils"
+        "https:\\/\\/powerful-anchorage-59625\\.herokuapp\\.com\\/api\\/hils"
       ],
       "strategy": "freshness",
       "maxSize": 20,
