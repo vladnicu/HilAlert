@@ -24,64 +24,66 @@
     <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-      if ("Notification" in window) {
-        if (Notification.permission === "granted") {
-          // Enable pusher logging - don't include this in production
-          Pusher.logToConsole = true;
-          var pusher = new Pusher("31977acdf3ac9290e324", {
-            cluster: "eu",
-          });
-
-          user = JSON.parse(localStorage.getItem("alert_user")).username;
-          title = "Hey " + user + "!";
-
-          var channel = pusher.subscribe("general");
-          channel.bind("new-hil-event", function (data) {
-            alert(JSON.stringify(data));
-
-            propertiesBody = "A new hil has been added: " + data.hil + "!";
-
-            doNotify(title, propertiesBody);
-            window.navigator.vibrate(200); // vibrate for 200ms
-          });
-
-          var channel = pusher.subscribe("general");
-          channel.bind("no-data-retrieved", function (data) {
-            // alert(JSON.stringify(data));
-
-            propertiesBody =
-              "This hil has not received an update for more that 2 minutes: " +
-              data.hil +
-              "!";
-
-            doNotify(title, propertiesBody);
-            window.navigator.vibrate(200); // vibrate for 200ms
-          });
-          var channel = pusher.subscribe(user);
-          channel.bind("property-changed", function (data) {
-            //alert(JSON.stringify(data));
-            propertiesBody =
-              "The following properties changed: " +
-              data.properties +
-              "on the hil " +
-              data.hil +
-              "!";
-
-            doNotify(title, propertiesBody);
-            window.navigator.vibrate(200); // vibrate for 200ms
-          });
-        } else {
-          //notification == denied
-          Notification.requestPermission()
-            .then(function (result) {
-              console.log(result); //granted || denied
-              if (Notification.permission == "granted") {
-                doNotify("Permissions granted!");
-              }
-            })
-            .catch((err) => {
-              console.log(err);
+      if (localStorage.getItem("alert_user")) {
+        if ("Notification" in window) {
+          if (Notification.permission === "granted") {
+            // Enable pusher logging - don't include this in production
+            Pusher.logToConsole = true;
+            var pusher = new Pusher("31977acdf3ac9290e324", {
+              cluster: "eu",
             });
+
+            user = JSON.parse(localStorage.getItem("alert_user")).username;
+            title = "Hey " + user + "!";
+
+            var channel = pusher.subscribe("general");
+            channel.bind("new-hil-event", function (data) {
+              alert(JSON.stringify(data));
+
+              propertiesBody = "A new hil has been added: " + data.hil + "!";
+
+              doNotify(title, propertiesBody);
+              window.navigator.vibrate(200); // vibrate for 200ms
+            });
+
+            var channel = pusher.subscribe("general");
+            channel.bind("no-data-retrieved", function (data) {
+              // alert(JSON.stringify(data));
+
+              propertiesBody =
+                "This hil has not received an update for more that 2 minutes: " +
+                data.hil +
+                "!";
+
+              doNotify(title, propertiesBody);
+              window.navigator.vibrate(200); // vibrate for 200ms
+            });
+            var channel = pusher.subscribe(user);
+            channel.bind("property-changed", function (data) {
+              //alert(JSON.stringify(data));
+              propertiesBody =
+                "The following properties changed: " +
+                data.properties +
+                "on the hil " +
+                data.hil +
+                "!";
+
+              doNotify(title, propertiesBody);
+              window.navigator.vibrate(200); // vibrate for 200ms
+            });
+          } else {
+            //notification == denied
+            Notification.requestPermission()
+              .then(function (result) {
+                console.log(result); //granted || denied
+                if (Notification.permission == "granted") {
+                  doNotify("Permissions granted!");
+                }
+              })
+              .catch((err) => {
+                console.log(err);
+              });
+          }
         }
       }
       function doNotify(title, body) {

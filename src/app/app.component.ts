@@ -10,12 +10,6 @@ export class AppComponent {
   title = 'hil-alert';
 
   constructor(updates: SwUpdate, private swPush: SwPush) {
-    window.addEventListener('beforeinstallprompt', (e) => {
-      // Prevent the mini-infobar from appearing on mobile
-      e.preventDefault();
-
-      console.log('install constructor app');
-    });
 
     updates.available.subscribe((event) => {
       // this.update = true;
