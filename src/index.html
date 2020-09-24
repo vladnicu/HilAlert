@@ -42,10 +42,7 @@
           channel.bind("new-hil-event", function (data) {
             //alert(JSON.stringify(data));
 
-            propertiesBody =
-              "A new hil has been added: " +
-              data.hil +
-              "!";
+            propertiesBody = "A new hil has been added: " + data.hil + "!";
 
             doNotify(title, propertiesBody);
             window.navigator.vibrate(200); // vibrate for 200ms
@@ -53,7 +50,7 @@
 
           var channel = pusher.subscribe("general");
           channel.bind("no-data-retrieved", function (data) {
-           // alert(JSON.stringify(data));
+            // alert(JSON.stringify(data));
 
             propertiesBody =
               "This hil has not received an update for more that 2 minutes: " +

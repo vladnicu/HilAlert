@@ -3,7 +3,7 @@ import { HilSelectionDialogComponent } from '../hil-selection-dialog/hil-selecti
 import { MatDialog } from '@angular/material/dialog';
 
 import { Hil } from 'src/app/shared/services/hil.service';
-import { User, UserService } from 'src/app/shared/services/user.service';
+import { UserService } from 'src/app/shared/services/user.service';
 import { PropertiesSelectionDialogComponent } from '../properties-selection-dialog/properties-selection-dialog.component';
 import { PropertyService } from 'src/app/shared/services/property.service';
 import { ToastrService } from 'ngx-toastr';
@@ -22,7 +22,7 @@ export class SettingsPageComponent implements OnInit {
     private toastr: ToastrService,
   ) {}
 
-  username = localStorage.getItem('username');
+  username = this.userService.getAuthValue.username;
 
   ngOnInit(): void {}
 
@@ -31,12 +31,12 @@ export class SettingsPageComponent implements OnInit {
       width: '30%',
     });
     dialogRef.afterClosed().subscribe((result: Hil[]) => {
-      const numberArrayHils: Array<number> = [];
-      localStorage.setItem(
-        'hils',
-        JSON.stringify(result.map((x) => x.labcarname))
-      );
       if (result) {
+        localStorage.setItem(
+          'hils',
+          JSON.stringify(result.map((x) => x.labcarname))
+        );
+        const numberArrayHils: Array<number> = [];
         for (const entry of result) {
           numberArrayHils.push(entry.id);
         }
