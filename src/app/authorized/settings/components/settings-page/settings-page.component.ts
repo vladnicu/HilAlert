@@ -28,7 +28,7 @@ export class SettingsPageComponent implements OnInit {
 
   openHilsSelectionDialog(): void {
     const dialogRef = this.dialog.open(HilSelectionDialogComponent, {
-      width: '30%',
+      width: '90%',
     });
     dialogRef.afterClosed().subscribe((result: Hil[]) => {
       if (result) {
@@ -50,7 +50,7 @@ export class SettingsPageComponent implements OnInit {
 
   openPropertiesSelectionDialog(): void {
     const dialogRef = this.dialog.open(PropertiesSelectionDialogComponent, {
-      width: '30%',
+      width: '90%',
     });
     dialogRef.afterClosed().subscribe((result) => {
       const numberArrayProperties: Array<number> = [];
