@@ -27,9 +27,6 @@
     <script>
       if ("Notification" in window) {
         if (Notification.permission === "granted") {
-          // If it's okay let's create a notification
-          //doNotify("The Title","This is the body!");
-
           // Enable pusher logging - don't include this in production
           Pusher.logToConsole = true;
           var pusher = new Pusher("31977acdf3ac9290e324", {
@@ -41,7 +38,7 @@
 
           var channel = pusher.subscribe("general");
           channel.bind("new-hil-event", function (data) {
-            //alert(JSON.stringify(data));
+            alert(JSON.stringify(data));
 
             propertiesBody = "A new hil has been added: " + data.hil + "!";
 
@@ -107,7 +104,7 @@
         setTimeout(n.close.bind(n), 3000); //close notification after 3 seconds
       }
     </script>
-    <script src="runtime.ed95371115ac19fb5792.js" defer></script>
+    <script src="runtime.2c577cd30d0883a0c3e4.js" defer></script>
     <script src="polyfills.df8df8924122ea727a19.js" defer></script>
     <script src="scripts.2b9f9610fbe1e544e9bb.js" defer></script>
     <script src="main.39058ef309557ccc0329.js" defer></script>
