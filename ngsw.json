@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1600934896901,
+  "timestamp": 1600936512885,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -11,18 +11,25 @@
         "ignoreVary": true
       },
       "urls": [
+        "/1.85c9e89adff896ee5c9e.js",
         "/1.fdb42b7cea27259cc30d.js",
         "/5.53310f046e573aedf6b6.js",
         "/6.80c24b616fab1b208cdc.js",
         "/7.a913a88183fa6c464de3.js",
         "/favicon.ico",
         "/index.html",
+        "/main.11c4464695e47a64aacf.js",
         "/main.39058ef309557ccc0329.js",
+        "/main.80c30962e37cebd4b14b.js",
         "/manifest.webmanifest",
+        "/ngsw-worker.js",
         "/polyfills.df8df8924122ea727a19.js",
+        "/runtime.0b5518d8b3dda7b2d38b.js",
         "/runtime.2c577cd30d0883a0c3e4.js",
+        "/safety-worker.js",
         "/scripts.2b9f9610fbe1e544e9bb.js",
-        "/styles.dd5b2da75255b7ff40dc.css"
+        "/styles.dd5b2da75255b7ff40dc.css",
+        "/worker-basic.min.js"
       ],
       "patterns": []
     },
@@ -69,7 +76,7 @@
     {
       "name": "hils-api",
       "patterns": [
-        "https:\\/\\/powerful-anchorage-59625\\.herokuapp\\.com\\/api\\/hils"
+        "https:\\/\\/my-json-server\\.typicode\\.com\\/vladnicu\\/HilAlert\\/hils"
       ],
       "strategy": "freshness",
       "maxSize": 20,
@@ -82,6 +89,7 @@
     }
   ],
   "hashTable": {
+    "/1.85c9e89adff896ee5c9e.js": "e2f05d388100a3e910f84741eefc4af83b7eef0d",
     "/1.fdb42b7cea27259cc30d.js": "628e64680361a96b3faf7232c15ee362583bf9f6",
     "/5.53310f046e573aedf6b6.js": "f3f482240cd48dfdfd52ad16c1fad91fab1ad9c1",
     "/6.80c24b616fab1b208cdc.js": "cac7ee0f889fa62833558b8fb02489916798b71c",
@@ -114,13 +122,19 @@
     "/fontawesome-webfont.8b43027f47b20503057d.eot": "d980c2ce873dc43af460d4d572d441304499f400",
     "/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg": "98a8aa5cf7d62c2eff5f07ede8d844b874ef06ed",
     "/fontawesome-webfont.f691f37e57f04c152e23.woff": "28b782240b3e76db824e12c02754a9731a167527",
-    "/index.html": "4ede4c6694d380b32ea09bd17a08d1b624833539",
+    "/index.html": "52494587d8a8ddc7cff9eeb46341b5ba803f7a0c",
+    "/main.11c4464695e47a64aacf.js": "69f371d1db9a381ae2bba01a29c22f26b5ddc732",
     "/main.39058ef309557ccc0329.js": "043b2683b3b199dc60835f9cfc17d031babb2fd7",
+    "/main.80c30962e37cebd4b14b.js": "2613dc23c26576eb2fada85622bbd032437c0c48",
     "/manifest.webmanifest": "f47dadb67af3abaf8340cd154ddf4b621d548cf2",
+    "/ngsw-worker.js": "c3b3c152737629b63e937a68ca48b8911606ece7",
     "/polyfills.df8df8924122ea727a19.js": "99facf9bee8da793cc8401108fb1e1fa7c6c4782",
+    "/runtime.0b5518d8b3dda7b2d38b.js": "235e4650bd14d348109bdbd7ddfccb2d2a2bf299",
     "/runtime.2c577cd30d0883a0c3e4.js": "98ddd7e4ec7045879ba941d477c111a44cd364d3",
+    "/safety-worker.js": "f532926317210be6e2679d21748dc44a35389807",
     "/scripts.2b9f9610fbe1e544e9bb.js": "3bfa30b5741e92b3e404a83e358de07f7b9bb8b7",
-    "/styles.dd5b2da75255b7ff40dc.css": "a558fdbbc6e7615a76ffce31abe3b108417f5fac"
+    "/styles.dd5b2da75255b7ff40dc.css": "a558fdbbc6e7615a76ffce31abe3b108417f5fac",
+    "/worker-basic.min.js": "f532926317210be6e2679d21748dc44a35389807"
   },
   "navigationUrls": [
     {
