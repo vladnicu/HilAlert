@@ -50,6 +50,10 @@ export class UserService {
     return this.http.patch<any>(environment.apiUrl + '/users/' + username, { hils });
   }
 
+  sendProperties(username, properties: Array<number>): Observable<any> {
+    return this.http.patch<any>(environment.apiUrl + '/users/' + username, { properties });
+  }
+
   logout(): void {
     localStorage.removeItem('alert_user');
     this.router.navigate(['/']);

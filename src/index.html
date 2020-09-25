@@ -38,8 +38,6 @@
 
             var channel = pusher.subscribe("general");
             channel.bind("new-hil-event", function (data) {
-              alert(JSON.stringify(data));
-
               propertiesBody = "A new hil has been added: " + data.hil + "!";
 
               doNotify(title, propertiesBody);
@@ -60,7 +58,7 @@
             });
             var channel = pusher.subscribe(user);
             channel.bind("property-changed", function (data) {
-              //alert(JSON.stringify(data));
+              alert(JSON.stringify(data));
               propertiesBody =
                 "The following properties changed: " +
                 data.properties +
