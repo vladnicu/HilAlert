@@ -62,7 +62,7 @@ export class SettingsPageComponent implements OnInit {
         for (const entry of result) {
           numberArrayProperties.push(entry.id);
         }
-        this.userService.sendHils(this.username, numberArrayProperties).subscribe(
+        this.userService.sendProperties(this.username, numberArrayProperties).subscribe(
           (data) => this.toastr.success('Settings saved.', 'Success!'),
           (error) => console.log(error)
         );

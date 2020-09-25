@@ -58,7 +58,6 @@
             });
             var channel = pusher.subscribe(user);
             channel.bind("property-changed", function (data) {
-              alert(JSON.stringify(data));
               propertiesBody =
                 "The following properties changed: " +
                 data.properties +
